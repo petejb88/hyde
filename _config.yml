@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         kramdown
 #highlighter:      pygments
 
 
@@ -10,7 +10,7 @@ permalink:        pretty
 # Setup
 title:            Peter Bonventre
 tagline:          'Peter Bonventre'
-description:      'Postdoctoral Scholar, University of Kentucky'
+description:      'Mathematician, Postdoctoral Scholar, University of Kentucky'
 url:              https://www.ms.uky.edu/~pjbo227/index.html
 baseurl:          /
 
