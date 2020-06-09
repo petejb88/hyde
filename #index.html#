@@ -1,0 +1,98 @@
+---
+layout: default
+title: Home
+---
+
+<h3>About Me</h3>
+<p>
+  I am currently a Postdoctoral Scholar in the
+  <a href="https://math.as.uky.edu/topology-and-geometry">topology group</a>
+  at the
+  <a href="https://math.as.uky.edu/">University of Kentucky</a>.
+</p>
+<p>
+  I completed my Ph.D. in Mathematics at the
+  <a href="http://www.math.virginia.edu">
+    University of Virginia</a>
+  in May 2017,
+  under the supervision of
+  <a href="http://math.ucla.edu/~mikehill/index.html">
+    Mike Hill</a>.
+</p>
+
+<p>
+  <a href="Bonventre-CV.pdf">Curriculum Vitae</a> (updated 06 Apr 2020).
+</p>
+
+
+<!-- picture -->
+<img src="https://www.ms.uky.edu/~pjbo227/picture.jpg" alt="" border="0" style="width:500px"/>
+
+<br>
+
+<!-- links -->
+<h3>Links</h3>
+<p>
+  <a href="http://www.ms.uky.edu/~mathclub/">UKY Undergraduate Math Club</a>.
+</p>
+<p>
+  <a href="https://ukmathlab.blogspot.com/">UKY Math Lab</a>
+</p>
+$<p>
+  <a href="http://www.ms.uky.edu/~topology/MTS2018/">Fall 2018 Midwest Topolgoy Seminar (UKY)</a>
+</p>
+
+<br>
+
+<h3>Contact Information</h3>
+<p>
+  University of Kentucky<br>
+  Department of Mathematics<br>
+  715 Patterson Office Tower
+  Lexington, KY 40506<br>
+  <br>
+  Email: peterbonventre@uky.edu
+</p>
+
+
+
+
+
+
+
+
+
+<!--
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>x
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
+-->
