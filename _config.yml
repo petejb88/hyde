@@ -1,27 +1,19 @@
-# Dependencies
-markdown:         kramdown
-#highlighter:      pygments
-
-
-# Permalinks
-permalink:        pretty
-#relative_permalinks: true
-
 # Setup
 title:            Peter Bonventre
 tagline:          'Peter Bonventre'
 description:      'Mathematician, Postdoctoral Scholar, University of Kentucky'
-url:              https://www.ms.uky.edu/~pjbo227/index.html
-baseurl:          /
+url:              https://petejb88.github.io
+baseurl:          ''
+paginate:         5
 
-author:
-  name:           'Mark Otto'
-  url:            https://twitter.com/mdo
-
-#paginate:         5
-
-# Custom vars
-version:          2.1.0
+author:           
+  name:           'Peter Bonventre'
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/petejb88
+
+# Gems
+plugins:
+        - jekyll-paginate
+        - jekll-gist
+        - jekyll-katex
