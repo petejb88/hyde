@@ -2,7 +2,7 @@
 layout: page
 title: Research
 ---
-## Research Interests
+### Research Interests
 
 Current objects of study are topics in algebraic topology related to equivariant stable homotopy theory and categorical algebra, in particular: equivariant operads, dendroidal sets, model categories, and structured ring spectra.
 
@@ -13,9 +13,9 @@ Recent and ongoing work includes:
 * building new combinatorial models for equivariant operads up to homotopy
 
 
-### Publications
+## Publications
 
-* **Presenting G-Operads**:
+ **Presenting G-Operads**:
 
 Using the Mandell-May presentation of orthogonoal G-spectra as motivation, I have found a way to present operads in G-spaces as monoids in an enriched functor category, which can be evaluated on any finite G-set. This gives us a more complete picture of the behavior of these operads, and may lead to new developments in defining model structures and exploring algebras over G-operads.
 
