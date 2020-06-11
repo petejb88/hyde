@@ -2,6 +2,41 @@
 layout: page
 title: Research
 ---
+    
+
+<head>
+<script language="javascript" type="text/javascript">
+function showHide(shID) {
+    if (document.getElementById(shID)) {
+    if (document.getElementById(shID+'-show').style.display != 'none') {
+    document.getElementById(shID+'-show').style.display = 'none';
+    document.getElementById(shID).style.display = 'block';
+    }
+    else {
+document.getElementById(shID+'-show').style.display = 'inline';
+    document.getElementById(shID).style.display = 'none';
+}
+}
+}
+</script>
+
+<style>
+.more {
+display: none;
+border-top: 0px solid #666;
+border-bottom: 0px solid #666; }
+a.showLink, a.hideLink {
+text-decoration: none;
+color: #b75858;
+padding-left: 8px;
+background: transparent url(down.gif) no-repeat left; }
+a.hideLink {
+background: transparent url(up.gif) no-repeat left; }
+a.showLink:hover, a.hideLink:hover {
+border-bottom: 1px dotted #b75858; }
+</style>
+</head>
+    
 
 Webpage in Progress.
 
@@ -21,7 +56,7 @@ In addition to these projects in pure mathematics, other projects and interests 
 
 ## Publications
 
-*The genuine operadic nerve*
+*The genuine operadic nerve*<br>
 _Theory and Applications of Categories_, Vol. 34, 2019, No. 26, pp 736--780.
  ArXiv preprint: [1904.01465](https://arxiv.org/abs/1904.01465)
  <a href="#" id="GenOpNerve-show" class="showLink" onclick="showHide('GenOpNerve');return false;">See abstract.</a>
@@ -32,7 +67,7 @@ We construct a generalization of the operadic nerve, providing a translation bet
 
 <br>
 
-*Equivariant dendroidal Segal spaces and G-infinity-operads* (with Luis Pereira)
+*Equivariant dendroidal Segal spaces and G-infinity-operads* (with Luis Pereira)<br>
 To appear in _Algebraic & Geometry Topology_.
 ArXiv preprint: [1801.02110](https://arxiv.org/abs/1801.02110)
 <a href="#" id="EDSS-show" class="showLink" onclick="showHide('EDSS');return false;">See abstract.</a>
