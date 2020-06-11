@@ -30,7 +30,7 @@ We construct a generalization of the operadic nerve, providing a translation bet
 <a href="#" id="GenOpNerve-hide" class="hideLink" onclick="showHide('GenOpNerve');return false;">Hide abstract.</a>
 </div>
 
-**Equivariant dendroidal Segal spaces and G-infinity-operads** (with Lu&#237s Pereira)<br>
+**Equivariant dendroidal Segal spaces and G-infinity-operads** (with Lu&#237;s Pereira)<br>
 To appear in _Algebraic & Geometry Topology_.
 ArXiv preprint: [1801.02110](https://arxiv.org/abs/1801.02110)
 <a href="#" id="EDSS-show" class="showLink" onclick="showHide('EDSS');return false;">See abstract.</a>
@@ -49,15 +49,15 @@ S. Amanuel, H. Bauer, **P. Bonventre**, D. Lasher<br>
 
 ## Preprints
 
-**Rigidification of dendroidal infinity-operads** (with Lu&#237s Pereira)<br>
-ArXiv preprint: [2004.12296]{https://arxiv.org/abs/2004.12296) (submitted)
+**Rigidification of dendroidal infinity-operads** (with Lu&#237;s Pereira)<br>
+ArXiv preprint: [2004.12296](https://arxiv.org/abs/2004.12296) (submitted)
 <a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">See abstract.</a>
 <div id="WCON" class="more">
 We give an explicit description of the rigidification of an infinity-operad as a simplicial operad. This description is based on the notion of dendroidal necklace, extending work of Dugger and Spivak from the categorical context to the operadic context, although with a different framework, which relates constructions involving necklaces to a standard factorization of maps in the category of trees.
 <a href="#" id="WCON-hide" class="hideLink" onclick="showHide('WCON');return false;">Hide abstract.</a>
 </div>
 
-**On the homotopy theory of equivariant colored operads** (with Lu&#237s Pereira)<br>
+**On the homotopy theory of equivariant colored operads** (with Lu&#237;s Pereira)<br>
 ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a> (submitted)
 <a href="#" id="ACOP-show" class="showLink" onclick="showHide('ACOP');return false;">See abstract.</a>
 <div id="ACOP" class="more"> 
@@ -81,7 +81,7 @@ We give example computations for the sphere spectrum, complex K-theory, and Mora
 <a href="#" id="JSQUAD-hide" class="hideLink" onclick="showHide('JSQUAD');return false;">Hide abstract.</a>
 </div>
 
-<b>Equivariant dendroidal sets and simplicial operads</b> (with Lu&#237s Pereira)<br>
+<b>Equivariant dendroidal sets and simplicial operads</b> (with Lu&#237;s Pereira)<br>
 ArXiv preprint: <a href="https://arxiv.org/abs/1911.06399">1911.06399</a>
 <a href="#" id="TAS-show" class="showLink" onclick="showHide('TAS');return false;">See abstract.</a>
 <div id="TAS" class="more">
@@ -89,7 +89,7 @@ We establish a Quillen equivalence between the homotopy theories of equivariant 
 <a href="#" id="TAS-hide" class="hideLink" onclick="showHide('TAS');return false;">Hide abstract.</a>
 </div>
 
-<b>Homotopy theory of equivariant operads with fixed colors</b> (with Lu&#237s Pereira) <br>
+<b>Homotopy theory of equivariant operads with fixed colors</b> (with Lu&#237;s Pereira) <br>
 ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a> (submitted)
 <a href="#" id="FCOP-show" class="showLink" onclick="showHide('FCOP');return false;">See abstract.</a>
 <div id="FCOP" class="more"> 
@@ -97,7 +97,7 @@ We build model structures on the category of equivariant simplicial operads with
 <a href="#" id="FCOP-hide" class="hideLink" onclick="showHide('FCOP');return false;">Hide abstract.</a>
 </div>
 
-<b>Genuine equivariant operads</b> (with Lu&#237s Pereira) <br>
+<b>Genuine equivariant operads</b> (with Lu&#237;s Pereira) <br>
 ArXiv preprint: <a href="https://arxiv.org/abs/1707.02226">1707.02226</a> (submitted)
 <a href="#" id="GEO-show" class="showLink" onclick="showHide('GEO');return false;">See abstract.</a>
 <div id="GEO" class="more"> 
@@ -105,4 +105,38 @@ We build new algebraic structures, which we call genuine equivariant operads, wh
 As an application, we build explicit models for the N-infinity-operads of Blumberg and Hill.
 <a href="#" id="GEO-hide" class="hideLink" onclick="showHide('GEO');return false;">Hide abstract.</a>
 </div>
-          
+
+
+## Other Writing
+
+<b>A new model and comparison of genuine equivariant symmetric monoidal categories</b> (with Lu&#237;s Pereira) <br>
+in preparation [draft available upon request]
+<a href="#" id="GSym-show" class="showLink" onclick="showHide('GSym');return false;">See abstract.</a>
+<div id="GSym" class="more"> 
+We construct a new model for genuine equivariant symmetric monoidal categories, based on applying the equivariant combinatorics of G-trees to the monad describing permutative categories.
+In particular, this provides a comparison and connection between all known equivariant generalizations of symmetric monoidal categories.
+Moreover, there is an equivariant Barratt-Priddy-Quillen Theorem in this context, consistent with pre-existing versions.
+<a href="#" id="GSym-hide" class="hideLink" onclick="showHide('GSym');return false;">Hide abstract.</a>
+</div>
+
+<b>Counterexamples to N-infinity realization candidates</b><br>
+Available <a href="counterexamples.pdf" style="text-decoration: none"><i><b>here</b></i></a> (updated 5 Jan 2016)
+<a href="#" id="Counter-show" class="showLink" onclick="showHide('Counter');return false;">See abstract.</a>
+<div id="Counter" class="more"> 
+We show that the Blumberg-May-Hill candidate for realizing any indexing system as an N-infinity operad fails for general groups.
+<a href="#" id="Counter-hide" class="hideLink" onclick="showHide('Counter');return false;">Hide abstract.</a>
+</div>
+
+<b>Presenting equivariant operads</b><br>
+Available <a href="presentinggoperads.pdf" style="text-decoration: none"><i><b>here</b></i></a> (updated 5 Jan 2016)
+<a href="#" id="Presenting-show" class="showLink" onclick="showHide('Presenting');return false;">See abstract.</a>
+<div id="Presenting" class="more"> 
+We encode single-colored operads in G-spaces as a coefficient system of monoids in enriched functor categories, which in particular yield evaluations for any finite H-set. 
+Moreover, this presentation explicitly presents the norm maps on N-infinity algebras.
+<a href="#" id="Presenting-hide" class="hideLink" onclick="showHide('Presenting');return false;">Hide abstract.</a>
+</div>
+
+## Dissertation
+
+**Models for Equivariant Operads**<br>
+Available [here](https://libra2.lib.virginia.edu/public_view/3f462553n).
