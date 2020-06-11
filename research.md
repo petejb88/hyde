@@ -4,42 +4,7 @@ title: Research
 ---
     
 
-<head>
-<script language="javascript" type="text/javascript">
-function showHide(shID) {
-    if (document.getElementById(shID)) {
-    if (document.getElementById(shID+'-show').style.display != 'none') {
-    document.getElementById(shID+'-show').style.display = 'none';
-    document.getElementById(shID).style.display = 'block';
-    }
-    else {
-document.getElementById(shID+'-show').style.display = 'inline';
-    document.getElementById(shID).style.display = 'none';
-}
-}
-}
-</script>
-
-<style>
-.more {
-display: none;
-border-top: 0px solid #666;
-border-bottom: 0px solid #666; }
-a.showLink, a.hideLink {
-text-decoration: none;
-color: #b75858;
-padding-left: 8px;
-background: transparent url(down.gif) no-repeat left; }
-a.hideLink {
-background: transparent url(up.gif) no-repeat left; }
-a.showLink:hover, a.hideLink:hover {
-border-bottom: 1px dotted #b75858; }
-</style>
-</head>
-    
-
-Webpage in Progress.
-
+   
 ## Research Interests
 
 Current objects of study are topics in algebraic topology related to equivariant stable homotopy theory and categorical algebra, in particular: equivariant operads, dendroidal sets, model categories, and structured ring spectra.
@@ -56,7 +21,7 @@ In addition to these projects in pure mathematics, other projects and interests 
 
 ## Publications
 
-*The genuine operadic nerve*<br>
+**The genuine operadic nerve**<br>
 _Theory and Applications of Categories_, Vol. 34, 2019, No. 26, pp 736--780.
  ArXiv preprint: [1904.01465](https://arxiv.org/abs/1904.01465)
  <a href="#" id="GenOpNerve-show" class="showLink" onclick="showHide('GenOpNerve');return false;">See abstract.</a>
@@ -65,9 +30,7 @@ We construct a generalization of the operadic nerve, providing a translation bet
 <a href="#" id="GenOpNerve-hide" class="hideLink" onclick="showHide('GenOpNerve');return false;">Hide abstract.</a>
 </div>
 
-<br>
-
-*Equivariant dendroidal Segal spaces and G-infinity-operads* (with Luis Pereira)<br>
+**Equivariant dendroidal Segal spaces and G-infinity-operads** (with Lu&#237s Pereira)<br>
 To appear in _Algebraic & Geometry Topology_.
 ArXiv preprint: [1801.02110](https://arxiv.org/abs/1801.02110)
 <a href="#" id="EDSS-show" class="showLink" onclick="showHide('EDSS');return false;">See abstract.</a>
@@ -75,3 +38,71 @@ ArXiv preprint: [1801.02110](https://arxiv.org/abs/1801.02110)
 We introduce the analogues of the notions of complete Segal space and of Segal category in the context of equivariant operads with norm maps, and build model categories with these as the fibrant objects. We then show that these model categories are Quillen equivalent to each other and to the model category for $G$-$\infty$-operads built in a previous paper. Moreover, we establish variants of these results for the Blumberg-Hill indexing systems. In an appendix, we discuss Reedy categories in the equivariant context.
 <a href="#" id="EDSS-hide" class="hideLink" onclick="showHide('EDSS');return false;">Hide abstract.</a>
 </div>
+
+**Estimating Energy Expeniture during Level, Uphill, and Downhill Walking**<br>
+D. Looney, W. Santee, E. Hansen, **P. Bonventre**, C. Chalmers, A. Potter<br>
+*Medicine & Science in Sports & Exercise*, 2019, Vol. 51(9), pp. 1954-1960
+
+**Nonfreezing Interfacial Layers of Cyclohexane in Nanoporous Silica**<br>
+S. Amanuel, H. Bauer, **P. Bonventre**, D. Lasher<br>
+*Journal of Physical Chemistry C*, 2009, 113(44), 18983-18986
+
+## Preprints
+
+**Rigidification of dendroidal infinity-operads** (with Lu&#237s Pereira)<br>
+ArXiv preprint: [2004.12296]{https://arxiv.org/abs/2004.12296) (submitted)
+<a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">See abstract.</a>
+<div id="WCON" class="more">
+We give an explicit description of the rigidification of an infinity-operad as a simplicial operad. This description is based on the notion of dendroidal necklace, extending work of Dugger and Spivak from the categorical context to the operadic context, although with a different framework, which relates constructions involving necklaces to a standard factorization of maps in the category of trees.
+<a href="#" id="WCON-hide" class="hideLink" onclick="showHide('WCON');return false;">Hide abstract.</a>
+</div>
+
+**On the homotopy theory of equivariant colored operads** (with Lu&#237s Pereira)<br>
+ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a> (submitted)
+<a href="#" id="ACOP-show" class="showLink" onclick="showHide('ACOP');return false;">See abstract.</a>
+<div id="ACOP" class="more"> 
+We build model structures on the category of equivariant simplicial operads with weak equivalences determined by families of subgroups, in the context of operads with a varying set of colors (and building on the fixed color model structures in the prequel). In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads whose weak equivalences are determined by norm map data.
+<a href="#" id="ACOP-hide" class="hideLink" onclick="showHide('ACOP');return false;">Hide abstract.</a>
+</div>
+                          
+<b>Additive power operations in equivariant cohomology</b> (with Bertrand J Guillou and Nathaniel J Stapleton) <br>
+ArXiv preprint: <a href="https://arxiv.org/abs/2001.11078">2001.11078</a> (submitted)
+<a href="#" id="JSQUAD-show" class="showLink" onclick="showHide('JSQUAD');return false;">See abstract.</a>
+<div id="JSQUAD" class="more"> 
+Let $G$ be a finite group and $E$ be an $H_\infty$-ring $G$-spectrum.
+For any $G$-space $X$ and positive integer m, we give an explicit description of the smallest Mackey ideal
+$\underline{J} \in \underline{E}^0(X \times B \Sigma_m)$
+for which the reduced mth power operation
+$\underline{E}^0(X) \to \underline{E}^0(X \times B \Sigma_m)/\underline{J}$
+is a map of Green functors.
+We obtain this result as a special case of a general theorem that we establish in the context of G×Σm-Green functors.
+This theorem also specializes to characterize the appropriate ideal $\underline{J}$ when $E$ is an ultra-commutative global ring spectrum.
+We give example computations for the sphere spectrum, complex K-theory, and Morava E-theory.
+<a href="#" id="JSQUAD-hide" class="hideLink" onclick="showHide('JSQUAD');return false;">Hide abstract.</a>
+</div>
+
+<b>Equivariant dendroidal sets and simplicial operads</b> (with Lu&#237s Pereira)<br>
+ArXiv preprint: <a href="https://arxiv.org/abs/1911.06399">1911.06399</a>
+<a href="#" id="TAS-show" class="showLink" onclick="showHide('TAS');return false;">See abstract.</a>
+<div id="TAS" class="more">
+We establish a Quillen equivalence between the homotopy theories of equivariant Segal operads and equivariant simplicial operads with norm maps. Together with previous work, we further conclude that the homotopy coherent nerve is a right-Quillen equivalence from the model category of equivariant simplicial operads with norm maps to the model category structure for equivariant-∞-operads in equivariant dendroidal sets.
+<a href="#" id="TAS-hide" class="hideLink" onclick="showHide('TAS');return false;">Hide abstract.</a>
+</div>
+
+<b>Homotopy theory of equivariant operads with fixed colors</b> (with Lu&#237s Pereira) <br>
+ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a> (submitted)
+<a href="#" id="FCOP-show" class="showLink" onclick="showHide('FCOP');return false;">See abstract.</a>
+<div id="FCOP" class="more"> 
+We build model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences determined by families of subgroups. In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences are determined by norm map data.
+<a href="#" id="FCOP-hide" class="hideLink" onclick="showHide('FCOP');return false;">Hide abstract.</a>
+</div>
+
+<b>Genuine equivariant operads</b> (with Lu&#237s Pereira) <br>
+ArXiv preprint: <a href="https://arxiv.org/abs/1707.02226">1707.02226</a> (submitted)
+<a href="#" id="GEO-show" class="showLink" onclick="showHide('GEO');return false;">See abstract.</a>
+<div id="GEO" class="more"> 
+We build new algebraic structures, which we call genuine equivariant operads, which can be thought of as a hybrid between equivariant operads and coefficient systems. We then prove an Elmendorf-Piacenza type theorem stating that equivariant operads, with their graph model structure, are equivalent to genuine equivariant operads, with their projective model structure. 
+As an application, we build explicit models for the N-infinity-operads of Blumberg and Hill.
+<a href="#" id="GEO-hide" class="hideLink" onclick="showHide('GEO');return false;">Hide abstract.</a>
+</div>
+          
