@@ -15,5 +15,5 @@ github:
 # Gems
 plugins:
         - jekyll-paginate
-        - jekll-gist
-        - jekyll-katex
+        - jekyll-gist
+        
