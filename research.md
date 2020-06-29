@@ -2,22 +2,25 @@
 layout: page
 title: Research
 ---
-    
 
-   
+
 ## Research Interests
-
-Current objects of study are topics in algebraic topology related to equivariant stable homotopy theory and categorical algebra, in particular: equivariant operads, dendroidal sets, model categories, and structured ring spectra.
+   
+I conduct pure mathematics research in algebraic topology, a field which aims to understand spaces by using algebraic invariants.
+Specifically, much of my published work is in stable homotopy theory and equivariant categorical algebra.
+I am drawn to questions of how to scaffold large and intricate problems, and build the tools that will be most effective to answer them.
+   
+Current objects of study include: equivariant operads, dendroidal sets, model categories, and structured ring spectra.
 
 Recent and ongoing work includes:
 * investigating topological and spectral commutative monoids up to homotopy in the equivariant setting
-* exploring the impact of these structures on cohomology theories, and computing examples (by hand and using Macaulay2)
-* developing the homotopy theory of equivariant operads
+* exploring the impact of this structure on cohomology theories, and computing examples (by hand and using Macaulay2)
+* developing and comparing several models for the homotopy theory of equivariant operads
 * building new combinatorial models for equivariant operads up to homotopy
 
 In addition to these projects in pure mathematics, other projects and interests include:
-* model energy expenditure during graded walking
-* visualization, analysis, and generation of four-part baroque choral music
+* modeling energy expenditure during graded walking
+* visualization, analysis, and generation of four-part baroque choral music using machine learning techniques
 
 ## Publications
 

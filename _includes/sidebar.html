@@ -2,17 +2,16 @@
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <h2>
-        <!-- <a href="{{ site.baseurl }}"> -->
-          <a href="https://petejb88.github.io">
-          {{ site.title }}
+        <a href="{{ site.url }}">
+        {{ site.title }}
         </a>
       </h2>
       <p class="lead">{{ site.description }}</p>
     </div>
 
     <nav class="sidebar-nav">
-      <a class="sidebar-nav-item{% if page.url == "Home" %} active{% endif %}" href="https://petejb88.github.io">Home</a>
-
+      <a class="sidebar-nav-item{% if page.url == "Home" %} active{% endif %}" href="{{ site.url }}">Home</a>
+      
       {% comment %}
         The code below dynamically generates a sidebar nav of pages with
         `layout: page` in the front-matter. See readme for usage.
@@ -31,6 +30,6 @@
 
     
     
-    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved. Built using <a href="https://hyde.getpoole.com/">Hyde</a>. </p>
+    <p>&copy; {{ site.time | date: '%Y' }}. All rights reserved. <br> Built using <a href="https://hyde.getpoole.com/">Hyde</a>. </p>
   </div>
 </div>
