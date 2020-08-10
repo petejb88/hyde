@@ -232,14 +232,25 @@ a.sidebar-nav-item:focus {
 }
 
 /* Dark Blue (custum) */
-.theme-base-10 .sidebar {
+.theme-base-11 .sidebar {
   background-color: #396e85;
+}
+.theme-base-11 .content a,
+.theme-base-11 .related-posts li a:hover {
+  color: #30a2d1;
+}
+
+/* Purple (custom) */
+.theme-base-10 .sidebar {
+  background-color: #602D89;
 }
 .theme-base-10 .content a,
 .theme-base-10 .related-posts li a:hover {
   color: #30a2d1;
 }
-  
+
+
+
 /* Magenta */
 .theme-base-0e .sidebar {
   background-color: #aa759f;
