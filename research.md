@@ -24,16 +24,17 @@ In addition to these projects in pure mathematics, other projects and interests 
 
 ## Publications
 
-**The genuine operadic nerve**<br>
-_Theory and Applications of Categories_, Vol. 34, 2019, No. 26, pp 736--780.
- ArXiv preprint: [1904.01465](https://arxiv.org/abs/1904.01465)
- <a href="#" id="GenOpNerve-show" class="showLink" onclick="showHide('GenOpNerve');return false;">(see abstract)</a>
- <div id="GenOpNerve" class="more">
-We construct a generalization of the operadic nerve, providing a translation between the 1-categorical equivariant operadic world to the parametrized infinity-categorical perspective. This naturally factors through genuine equivariant operads, another model for homotopical equivariant operads. Moreover, we introduce the notion of a fibration of genuine equivariant operads, extending Grothendieck fibrations, and characterize the fibrant operads as the image of genuine equivariant symmetric monoidal categories. Finally, we show that under the operadic nerve, the image of genuine monoidal categories are G-symmetric monoidal G-infinity-categories.
-<a href="#" id="GenOpNerve-hide" class="hideLink" onclick="showHide('GenOpNerve');return false;">(hide abstract)</a>
+**Rigidification of dendroidal infinity-operads** (with Lu&#237;s Pereira)<br>
+To appear in _Homology, Homotopy and APplications_.
+ArXiv preprint: [2004.12296](https://arxiv.org/abs/2004.12296) (submitted)
+<a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">(see abstract)</a>
+<div id="WCON" class="more">
+We give an explicit description of the rigidification of an infinity-operad as a simplicial operad. This description is based on the notion of dendroidal necklace, extending work of Dugger and Spivak from the categorical context to the operadic context, although with a different framework, which relates constructions involving necklaces to a standard factorization of maps in the category of trees.
+<a href="#" id="WCON-hide" class="hideLink" onclick="showHide('WCON');return false;">(hide abstract)</a>
 <br>
 <br>
 </div>
+
 
 **Equivariant dendroidal Segal spaces and G-infinity-operads** (with Lu&#237;s Pereira)<br>
 To appear in _Algebraic & Geometry Topology_.
@@ -42,6 +43,18 @@ ArXiv preprint: [1801.02110](https://arxiv.org/abs/1801.02110)
 <div id="EDSS" class="more">
 We introduce the analogues of the notions of complete Segal space and of Segal category in the context of equivariant operads with norm maps, and build model categories with these as the fibrant objects. We then show that these model categories are Quillen equivalent to each other and to the model category for $G$-$\infty$-operads built in a previous paper. Moreover, we establish variants of these results for the Blumberg-Hill indexing systems. In an appendix, we discuss Reedy categories in the equivariant context.
 <a href="#" id="EDSS-hide" class="hideLink" onclick="showHide('EDSS');return false;">(hide abstract)</a>
+<br>
+<br>
+</div>
+
+
+**The genuine operadic nerve**<br>
+_Theory and Applications of Categories_, Vol. 34, 2019, No. 26, pp 736--780.
+ ArXiv preprint: [1904.01465](https://arxiv.org/abs/1904.01465)
+ <a href="#" id="GenOpNerve-show" class="showLink" onclick="showHide('GenOpNerve');return false;">(see abstract)</a>
+ <div id="GenOpNerve" class="more">
+We construct a generalization of the operadic nerve, providing a translation between the 1-categorical equivariant operadic world to the parametrized infinity-categorical perspective. This naturally factors through genuine equivariant operads, another model for homotopical equivariant operads. Moreover, we introduce the notion of a fibration of genuine equivariant operads, extending Grothendieck fibrations, and characterize the fibrant operads as the image of genuine equivariant symmetric monoidal categories. Finally, we show that under the operadic nerve, the image of genuine monoidal categories are G-symmetric monoidal G-infinity-categories.
+<a href="#" id="GenOpNerve-hide" class="hideLink" onclick="showHide('GenOpNerve');return false;">(hide abstract)</a>
 <br>
 <br>
 </div>
@@ -56,16 +69,6 @@ S. Amanuel, H. Bauer, **P. Bonventre**, D. Lasher<br>
 *Journal of Physical Chemistry C*, 2009, 113(44), 18983-18986
 
 ## Preprints
-
-**Rigidification of dendroidal infinity-operads** (with Lu&#237;s Pereira)<br>
-ArXiv preprint: [2004.12296](https://arxiv.org/abs/2004.12296) (submitted)
-<a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">(see abstract)</a>
-<div id="WCON" class="more">
-We give an explicit description of the rigidification of an infinity-operad as a simplicial operad. This description is based on the notion of dendroidal necklace, extending work of Dugger and Spivak from the categorical context to the operadic context, although with a different framework, which relates constructions involving necklaces to a standard factorization of maps in the category of trees.
-<a href="#" id="WCON-hide" class="hideLink" onclick="showHide('WCON');return false;">(hide abstract)</a>
-<br>
-<br>
-</div>
 
 **On the homotopy theory of equivariant colored operads** (with Lu&#237;s Pereira)<br>
 ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a> (submitted)
