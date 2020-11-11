@@ -130,7 +130,7 @@ As an application, we build explicit models for the N-infinity-operads of Blumbe
 
 ## Other Writing
 
-<b>A new model and comparison of genuine equivariant symmetric monoidal categories</b> (with Lu&#237;s Pereira) <br>
+<b>Genuine equivariant symmetric monoidal categories</b> (with Lu&#237;s Pereira) <br>
 in preparation [draft available upon request]
 <a href="#" id="GSym-show" class="showLink" onclick="showHide('GSym');return false;">(see abstract)</a>
 <div id="GSym" class="more"> 
