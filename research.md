@@ -24,9 +24,22 @@ In addition to these projects in pure mathematics, other projects and interests 
 
 ## Publications
 
+**Genuine equivariant operads** (with Lu&#237;s Pereira)<br>
+To appear in _Advancese in Mathematics_.
+ArXiv preprint: <a href="https://arxiv.org/abs/1707.02226">1707.02226</a>
+<a href="#" id="GEO-show" class="showLink" onclick="showHide('GEO');return false;">(see abstract)</a>
+<div id="GEO" class="more"> 
+We build new algebraic structures, which we call genuine equivariant operads, which can be thought of as a hybrid between equivariant operads and coefficient systems. We then prove an Elmendorf-Piacenza type theorem stating that equivariant operads, with their graph model structure, are equivalent to genuine equivariant operads, with their projective model structure. 
+As an application, we build explicit models for the N-infinity-operads of Blumberg and Hill.
+<a href="#" id="GEO-hide" class="hideLink" onclick="showHide('GEO');return false;">(hide abstract)</a>
+<br>
+<br>
+</div>
+
+
 **Rigidification of dendroidal infinity-operads** (with Lu&#237;s Pereira)<br>
-To appear in _Homology, Homotopy and APplications_.
-ArXiv preprint: [2004.12296](https://arxiv.org/abs/2004.12296) (submitted)
+To appear in _Homology, Homotopy and Applications_.
+ArXiv preprint: [2004.12296](https://arxiv.org/abs/2004.12296)
 <a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">(see abstract)</a>
 <div id="WCON" class="more">
 We give an explicit description of the rigidification of an infinity-operad as a simplicial operad. This description is based on the notion of dendroidal necklace, extending work of Dugger and Spivak from the categorical context to the operadic context, although with a different framework, which relates constructions involving necklaces to a standard factorization of maps in the category of trees.
@@ -114,17 +127,6 @@ ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a> (submi
 <div id="FCOP" class="more"> 
 We build model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences determined by families of subgroups. In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences are determined by norm map data.
 <a href="#" id="FCOP-hide" class="hideLink" onclick="showHide('FCOP');return false;">(hide abstract)</a>
-<br>
-<br>
-</div>
-
-<b>Genuine equivariant operads</b> (with Lu&#237;s Pereira) <br>
-ArXiv preprint: <a href="https://arxiv.org/abs/1707.02226">1707.02226</a> (submitted)
-<a href="#" id="GEO-show" class="showLink" onclick="showHide('GEO');return false;">(see abstract)</a>
-<div id="GEO" class="more"> 
-We build new algebraic structures, which we call genuine equivariant operads, which can be thought of as a hybrid between equivariant operads and coefficient systems. We then prove an Elmendorf-Piacenza type theorem stating that equivariant operads, with their graph model structure, are equivalent to genuine equivariant operads, with their projective model structure. 
-As an application, we build explicit models for the N-infinity-operads of Blumberg and Hill.
-<a href="#" id="GEO-hide" class="hideLink" onclick="showHide('GEO');return false;">(hide abstract)</a>
 </div>
 
 
