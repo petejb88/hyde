@@ -25,7 +25,7 @@ In addition to these projects in pure mathematics, other projects and interests 
 ## Publications
 
 **Genuine equivariant operads** (with Lu&#237;s Pereira)<br>
-To appear in _Advancese in Mathematics_.
+To appear in _Advances in Mathematics_.
 ArXiv preprint: <a href="https://arxiv.org/abs/1707.02226">1707.02226</a>
 <a href="#" id="GEO-show" class="showLink" onclick="showHide('GEO');return false;">(see abstract)</a>
 <div id="GEO" class="more"> 
