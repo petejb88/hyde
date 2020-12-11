@@ -1,0 +1,153 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+\let\sqrt=\undefined
+\DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}}
+\def\@x@sqrt#1#2{%
+ \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+ \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Written HW 10-10},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+\numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large Written Homework 10-10}
+\end{center}
+
+\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+\subsection*{Directions:}
+Write your solutions neatly and clearly, and submit to Canvas.
+In these problems, you should show all of your work in complete mathematical "sentences", writing complete English sentences when you explain your logic.
+You are free (and encouraged!) to work with others, but make sure the solutions you write up your solutions indepedently.
+
+\begin{exercise}[3 points]
+        Evaluate the limit, if it exists.
+        \[
+                \dlim_{t \to 0} \left( \dfrac{1}{t} - \dfrac{1}{t^2-t} \right).
+        \]        
+\end{exercise}
+
+$ $
+
+\begin{exercise}[3 points]
+        Given the function
+        \[
+                h(x) = \dfrac{|x-2|}{x}
+        \]
+        determine if $h(x)$ has horizontal asymptotes or vertical asymptotes.
+        Explain your answer using the limit definition of horizontal asymptote and the limit definition of vertical asymptote.
+\end{exercise}
+
+$ $
+
+\begin{exercise}[4 points]
+        A parking lot charges \$4 for the first hour (or part of an hour) and \$2 for each additioanl hour (or part), up to a daily maximum of \$12.
+        \begin{enumerate}[(a)]
+        \item Sketch a graph of the cost of parking at this lot as a function of the time parked there.
+        \item Discuss the discontinuities (and left- and right-continuities) of this function, and their significance to someone who parks in the lot.
+        \end{enumerate}
+\end{exercise}
+
+\end{document}
+
+

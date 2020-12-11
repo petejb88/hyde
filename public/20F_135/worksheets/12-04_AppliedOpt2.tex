@@ -1,0 +1,188 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{csquotes}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Applied Optimization II},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 12-04: Applied Optimization II}
+\end{center}
+
+\thispagestyle{empty}
+
+
+\renewcommand{\thesection}{\Alph{section}}
+
+Today we will be applying our optimization techniques (EVT and others) to solve word problems.
+\begin{itemize}
+\item The goal for all of these questions is to translate the word problem into a math question of the form
+        ``where is this function of one variable maximized/minimized?''
+        This process has many steps: finding the function at hand (and if necessary converting it into a function of one variable), considering the domain, and applying the EVT (or related analysis).
+\item Word problems are hard! They are hard for everyone --- students, grad students, professors, economists, politicans, doctors --- everyone.
+        It is okay to get discouraged or frustrated. But these are the most important questions: applying calculus techniques and problem solving skills to the ``real world''.
+        No one is going to offer you a job because you can take the derivative of a function, but a good problem solver is indispensable. 
+\end{itemize}
+
+\begin{exercise}
+        League of Legends is a multiplayer online video game. One aspect of the game involves battling other players.
+        A player's \textit{Effective Health} when defending against physical damage is given by
+        \[
+                E = h + \dfrac{ha}{100}
+        \]
+        where $h$ is the player's \textbf{Health} and $a$ is the player's \textbf{Armor}.
+        Players can purchase more Health and Armor with gold coins: Health costs 2.5 coins per unit, and Armor costs 18 coins per unit.
+        Suppose a player has 2662 gold coins.
+        What is the maximum Effective Health the player can achieve?
+        \begin{enumerate}[(a)]
+        \item Assume the player will spend all of their coins. Write an equation relating $h$ and $a$.
+                \vfill
+        \item Use your answer to Part (a) to write an equation for the player's Effective Health in terms of their Health $h$.
+                \vfill
+                \vfill
+                \vfill
+        \item What is the domain of this function in the context of this problem?
+                \vfill
+                \newpage
+        \item Maximize this function.
+                \vfill
+                \vfill
+        \item How do you know your value from Part (c) is the absolute maximum (as opposed to a local maximum or an absolute/local minimum)?
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+        A food company wants to design aluminum cans which minimize the amount of metal needed.
+        The cans need to hold 12 oz of liquid, or approximately 21.7 in$^3$.
+        \begin{enumerate}
+        \item Write an equation for the surface area $A$ of a cylindrical can in terms of the radius $r$ and the height $h$.
+                \vfill
+        \item Use the constraint that the cans need to hold 12 oz of liquid to write an equation relating $r$ and $h$.
+                \vfill
+        \item Combine Parts (a) and (b) to write an equation for the surface area $A$ as a function of the radius $r$.
+                \vfill
+                \vfill
+        \item What is the domain of this function in this context?
+                \vfill
+                \newpage
+        \item Minimize this function. Justify your answer.
+                \vfill
+                \vfill
+                \vfill
+        \item What does your answer to Part (c) mean in the context of this problem?
+                \vfill
+        \item What are the dimensions of the can the company should make?
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+\end{document}

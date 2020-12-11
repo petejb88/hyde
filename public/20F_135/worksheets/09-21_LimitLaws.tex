@@ -1,0 +1,167 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+\let\sqrt=\undefined
+\DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+\def\@x@sqrt#1#2{%
+ \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+ \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{setspace}
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Limits},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+\numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 09-21: Limit Law Guide}
+\end{center}
+
+\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+Suppose that $\displaystyle \lim_{x\to a} f(x)$ and $\displaystyle \lim_{x\to a}g(x)$ \textbf{both exist}. Then:\\
+\begin{enumerate}[1.]\itemsep+15pt
+\item $\displaystyle \lim_{x\to a}[f(x)+g(x)]=\lim_{x\to a}f(x)+\lim_{x\to a}g(x)$  \quad ({\em limit of the sum $=$ sum of the limits})
+\item $\displaystyle \lim_{x\to a}[f(x)-g(x)]=\lim_{x\to a}f(x)-\lim_{x\to a}g(x)$  
+\quad ({\em limit of the difference $=$ difference of the limits})
+\item $\displaystyle \lim_{x\to a}cf(x)=c\lim_{x\to a}f(x)$ for any constant $c$  \quad  ({\em constants pull out})
+\item $\displaystyle \lim_{x\to a}[f(x)g(x)]=\lim_{x\to a}f(x)\cdot\lim_{x\to a}g(x)$  \quad ({\em limit of the product $=$ product of the limits})
+\item $\displaystyle \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\displaystyle\lim_{x\to a}f(x)}{\displaystyle\lim_{x\to a}g(x)}$
+if $\displaystyle \lim_{x\to a}g(x)\neq0$  \quad ({\em limit of the quotient $=$ quotient of the limits})
+\item $\displaystyle \lim_{x\to a}\left[f(x)\right]^n=\left[\lim_{x\to a}f(x)\right]^n$
+where $n$ is any positive integer   \quad  ({\em this follows from 4.})
+\item $\displaystyle \lim_{x\to a} c =c$ for any constant $c$  \quad ({\em the limit of a constant is itself})
+\item $\displaystyle \lim_{x\to a} x = a$, and $\displaystyle \lim_{x\to a} x^n = a^n$ where $n$ is any positive integer.
+% \item $\displaystyle \lim_{x\to a} \sqrt[n]{x} = \sqrt[n]{a}$ where $n$ is a positive integer.
+% (If $n$ is even, we assume that $a>0$.)
+% \item $\displaystyle \lim_{x\to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x\to a}f(x)}$ where $n$ is a positive integer.
+% (If $n$ is even, we assume that $\displaystyle\lim_{x\to a}f(x)>0$.)
+\item $\displaystyle \lim_{x\to a} [f(x)]^{p/r} = [\lim_{x\to a} f(x)]^{p/r}$, where $p$ and $r$ are integers with $r \neq 0$.
+\end{enumerate}
+
+$ $
+
+\subsection*{One-sided Limits}
+These rules also follow for one-sided limits.
+
+\subsection*{Limit Existence Theorem}
+$\displaystyle\lim_{x\to a}f(x)=L$ if and only if
+$\displaystyle\lim_{x\to a^-}f(x)=L=\lim_{x\to a^+}f(x)$.
+\quad ({\em The left- and right-hand limits must both
+  exist and be equal for the general limit to exist.})
+
+\textit{Note:} This, along with one-sided limit laws, is helpful when one (or both) two-sided limits DNE.
+
+\subsection*{Direct Substitution Property}
+If $f$ is a polynomial, rational, exponential, or algebraic function, or is one of $\log_b(x)$, $\cos(x)$, or $\sin(x)$,
+and $a$ is in the domain of $f$, then $\displaystyle\lim_{x\to a}f(x)=f(a)$. \quad  ({\em Just plug it in!})
+
+\subsection*{Simplification Property}
+If $f(x)=g(x)$ when $x\neq a$, then
+$\displaystyle \lim_{x\to a}f(x)$ and $\lim_{x\to a}g(x)$ either both exist or both don't exist,
+and are equal provided they exist.
+
+\subsection*{The Squeeze Theorem} (Section 2.6)
+If $f(x)\leq g(x)\leq h(x)$ when $x$ is near $a$ (except possibly
+at $a$) and
+    \[
+    \lim_{x\to a}f(x)=\lim_{x\to a}h(x)=L,
+    \]
+then $\displaystyle\lim_{x\to a}g(x)=L$.
+
+
+\end{document}

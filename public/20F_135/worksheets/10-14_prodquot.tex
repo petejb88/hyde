@@ -1,0 +1,206 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Product and Quotient Rules},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 10-14: Product of Quotient Rules}
+\end{center}
+
+\thispagestyle{empty}
+
+
+\renewcommand{\thesection}{\Alph{section}}
+
+% \vspace{-1pt}
+
+Last week, we introduced the \textbf{derivative function} $f'(x)$ of a function $f(x)$, whose evaluation $f'(a)$ at the point $x=a$ is give by:
+\begin{itemize}
+\item the slope of the tangent line at $x=a$
+\item the instantaneous velocity at time $x = a$
+\end{itemize}
+
+On Monday, we covered algorithms to help us compute the derivatives of polynomials and exponential functions.
+Today, we'll tackle \textbf{products} and \textbf{quotients}
+
+\begin{theorem*}[Product Rule]
+        If $f(x)$ and $g(x)$ are differentiable functions, then so is their product $f(x) \cdot g(x)$.
+        The derivative of the product is given by
+        \begin{framed}
+                \[
+                        \dfrac{d}{dx}\Big( f(x) \cdot g(x) \Big) = f'(x) \cdot g(x) + f(x) \cdot g'(x).
+                \]
+        \end{framed}
+\end{theorem*}
+
+\begin{example}[Warning]
+        The derivative of a product is \textbf{not} equal to the product of the derivatives:
+        
+        Consider the product $x \cdot x$. Then
+        \[
+                \dfrac{d}{dx}\big( x \big) \cdot \dfrac{d}{dx}\big( x \big)
+                =
+                1 \cdot 1
+                =
+                1
+        \]
+        but instead
+        \[
+                \dfrac{d}{dx}\big(x \cdot x \big) =
+                \dfrac{d}{dx}\big(x) \cdot x + x \cdot \dfrac{d}{dx}\big( x \big) =
+                1 \cdot x + x \cdot 1 = 2x
+        \]
+        which is what the \textbf{power rule} gives us for the derivative of $x \cdot x = x^2$.
+\end{example}
+
+\begin{exercise}
+        Use the Product Rule to find $f'(x)$ when $f(x) = (3x^2+1)e^x$. Simlify your answer.
+        \vfill
+\end{exercise}
+
+\begin{theorem*}[Quotient Rule]
+        If $f(x)$ and $g(x)$ are differentiable functions, then so is their quotient $f(x)/g(x)$ whenever $g(x) \neq 0$.
+        The derivative of the quotient is given by
+        \begin{framed}
+                \[
+                        \dfrac{d}{dx} \left( \dfrac{f(x)}{g(x)} \right) = \dfrac{f'(x)g(x) - f(x)g'(x)}{(g(x))^2}.
+                \]
+        \end{framed}
+\end{theorem*}
+
+\begin{remark}
+        The Quotient Rule can be derived from the product rule:
+        Letting $Q(x) = \dfrac{f(x)}{g(x)}$, cross multiply the equation and differentiate both sides with respect to $x$ using the Product Rule.
+        Solving for $Q'(x)$ leads to the above formula.
+\end{remark}
+
+\newpage
+
+\begin{exercise}
+        Use the Quotient Rule to calculate the derivative of $\dfrac{1}{x^4}$ and check your answer against the result obtained from using the Power Rule.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        If $g(x) = \dfrac{3x+1}{2x-5}$, find a simplify $g'(x)$.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        If $h(x) = \dfrac{e^x}{x^2+1}$, find and simplify $h'(x)$.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        Suppose that $f(3) = 5$, $f'(3) = -7$, $g(3) = 2$, and $g'(3) = 1/2$.
+        If $H(x) = \dfrac{f(x)}{x g(x)}$, find $H'(3)$.
+        \vfill
+\end{exercise}
+
+\end{document}

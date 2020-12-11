@@ -1,0 +1,235 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{setspace}
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Algebraic Limits},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 09-28: Evaluating Limits Algebraically}
+\end{center}
+
+\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+\vspace{-1pt}
+\section{Indeterminant forms}
+
+We have looked at several ways to evaluate the limit $\dlim_{x \to a}f(x)$:
+\begin{enumerate}[(a)]
+\item If we know the function $f(x)$ is continuous at $x = a$, then the limit is simply $f(a)$.
+\item If we have the \textit{graph} of the function $f$, we can visually determine the limit.
+\item We can perform numerical calculations (i.e. plug in values really, really close to $a$) and make a guess about the limit based on this information.
+\item We can use algebra to make the calculation easier.
+\end{enumerate}
+
+\begin{example}
+        Recall the limit $\dlim_{x \to 3^+}\dfrac{1}{x-3}$ considered on 09-18.
+        Plugging in $x=3$, we get $1/0$, which does not exist.
+        However, it could be $+\infty$ or $-\infty$. Let's see:
+        \begin{enumerate}[(a)]\setcounter{enumi}{1}
+        \item If we had the graph, we would see that the function values blow up as $x \to 3^+$ (``$x$ approaches 3 from the right'').
+        \item Testing $x = 3.0001$, we get $f(3.0001) = 1/(0.0001) = 10000$ which just gets bigger if we add more zeros. Hence it makes sense to conclude that the limit is $+\infty$.
+        \item Algebraically, we have that as $x \to 3^+$, $(x-3) \to 0^+$, so we have that the limit can be expressed as
+                $1/0^+ = +\infty$.
+        \end{enumerate}
+\end{example}
+
+\begin{example}
+        Consider the limit $\dlim_{x \to -\infty}\dfrac{6x^4-5x^2+1}{3x^3-15}$.
+        ``Evaluating'', we would get
+        \[                
+                \dfrac{6(-\infty)^4 - (-\infty)^2+1}{3(-\infty)^3 - 15}\ \mbox{ `` = '' }\  \dfrac{\infty - \infty}{-\infty}.
+        \]
+        This expression contains two \textbf{indeterminant forms}, and thus gives us \textbf{no information}.
+\end{example}
+
+\begin{framed}
+        The key \textbf{indeterminante forms} are $\dfrac{0}{0}$, $\dfrac{\infty}{\infty}$, $\infty \cdot 0$, and $\infty - \infty$.\\\
+
+        A limit that takes one of these forms can by \textit{anything} (any value at all: a real number $L$, $+\infty$, $-\infty$, or DNE), and thus we can make \textbf{no conclusions whatsoever} about the limit based on this evaluation.
+        Instead, \textit{further algebraic work must be done} to find the actual value of the limit.        
+\end{framed}
+
+
+\begin{example*}[Example 2, Continued: Technique for Infinite Limits]
+        To get rid of these indeterminant forms, we first multiply this rational function by
+        $1 = \frac{1}{x^3}/\frac{1}{x^3}$
+        (where 3 is the highest power of $x$ in the denominator) to get
+        \[
+                \dfrac{6x^4-5x^2+1}{3x^3-15}
+                = \dfrac{\frac{6x^4}{x^3} - \frac{5x^2}{x^3} + \frac{1}{x^3}}{\frac{3x^3}{x^3} -\frac{15}{x^3}}
+                = \dfrac{6x - \frac{5}{x} + \frac{1}{x^3}}{3 - \frac{15}{x^3}}.
+        \]
+        We can now evaluate this limit, and get
+        \[
+                \dlim_{x \to -\infty}\dfrac{6x^4-5x^2+1}{3x^3-15}
+                = \dlim_{x \to -\infty}\dfrac{6x - \frac{5}{x} + \frac{1}{x^3}}{3 - \frac{15}{x^3}}
+                = \dlim_{x \to -\infty}\dfrac{-6\infty - 0}{3-0}
+                = -\infty.
+        \]
+\end{example*}
+
+\newpage
+
+\begin{exercise}
+        Compute $\dlim_{x \to -\infty}\dfrac{5x^3-2x^2+3}{-2x^2+1}$.
+        \vfill
+\end{exercise}
+
+\section{Changing one value}
+Recall the following key observation:
+\begin{framed}
+        The value of $f(a)$ (or even if it exists) has \textbf{no effect} on the value of $\dlim_{x \to a}f(x)$.
+\end{framed}
+This means that if we change the function only at $x=a$, the limit is unchanged.
+
+\begin{exercise}[General technique for $\frac{0}{0}$]
+        Find the value of the limit by first canceling a common factor from the numerator and the denominator.
+        What value of the function have we changed?
+        \[
+                \dlim_{x \to 2}\dfrac{x^2-4}{x^2+4x-12}
+        \]
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        If $f(x) = 5x^2-3x$, find the value of $\dlim_{h \to 0}\dfrac{f(3+h)-f(3)}{h}$.
+        \vfill          
+\end{exercise}
+
+\begin{exercise}[Technique for functions with square roots]
+        Find the value of $\dlim_{x \to 9}\dfrac{\sqrt x - 3}{9-x}$.
+        (\textit{Hint: multiply top and bottom by the conjugate $\sqrt x +3$ of the numerator.)}
+        \vfill
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+        Evaluate $\dlim_{\theta \to \pi/2} \dfrac{\tan \theta}{\sec \theta}$.
+        \vfill
+\end{exercise}
+
+\section{Other Techinques}
+\begin{exercise}[Technique for functions with absolute values]
+        Find the value of each one-sided limits.
+        \textit{Hint: use the definition of the absolute value function, and the property $|ab| = |a||b|$.}\\
+        \begin{enumerate*}[(i)]
+        \item $\dlim_{x \to 3^-} \dfrac{|4x-12|}{x-3}$
+                \qquad \qquad \qquad $ $ \qquad \qquad \qquad
+        \item $\dlim_{x \to 3^+} \dfrac{|4x-12|}{x-3}$
+        \end{enumerate*}
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        Find the value of $\dlim_{t \to 1}\dfrac{6}{t^2 - 1} - \dfrac{3}{t-1}$.
+        \textit{Hint: add the fractions and simplify.}
+        \vfill
+\end{exercise}
+
+\end{document}

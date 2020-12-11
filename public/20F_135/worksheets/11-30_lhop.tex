@@ -1,0 +1,202 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{csquotes}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - L'H\^{o}pital's Rule},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 11-30: L'H\^{o}pital's Rule}
+\end{center}
+
+\thispagestyle{empty}
+
+
+\renewcommand{\thesection}{\Alph{section}}
+
+% \vspace{-1pt}
+
+The \textbf{derivative} $f'(x)$ of a function $y=f(x)$ gives:
+\begin{itemize}
+\item the slope of the tangent line
+\item the instantaneous rate of change of $y$ with respect to $x$
+\end{itemize}
+
+\subsection*{Common Problem} Suppose we want to compute the limit of a rational function
+\[
+        \dlim_{x \to a} \dfrac{f(x)}{g(x)}
+\]
+but when we plug in $x = a$ (including $a = \pm \infty$), we get one of the following \textbf{indeterminant forms}:
+\[
+        \dfrac{0}{0} \qquad \mbox{or} \qquad  \dfrac{\pm \infty}{\infty}
+\]
+In this case, we can apply L'H\^{o}pital's Rule to help compute this limit.\\
+\begin{theorem}[L'H\^{o}pital's Rule, Guillaume Fran\c{c}ois Antoine Marquis de L'H\^{o}pital, 1696]
+        If $f$ and $g$ are differentiable functions such that
+        $\frac{f(a)}{g(a)}$
+        is one of the above indeterminant forms, then
+        \begin{framed}
+                \[
+                        \dlim_{x \to a} \dfrac{f(x)}{g(x)} = \dlim_{x \to a}\dfrac{f'(x)}{g'(x)}.
+                \]
+        \end{framed}
+\end{theorem}
+
+\begin{itemize}
+\item You may have to apply the rule multiple times to determine the limit
+\item The rule was actually discovered by Bernoulli in 1964.\\
+\end{itemize}
+
+\begin{example}
+        Consider $\dlim_{x \to 0} \dfrac{\sin x}{x}$, where $x$ is in radians.
+        Plugging in $x = 0$ yields the indeterminant form $\dfrac{0}{0}$, so L'H\^opital's Rule applies.
+        Thus we have
+        \[
+                \dlim_{x \to 0} \dfrac{\sin x}{x} = \dlim_{x \to 0} \dfrac{\cos x}{1} = \dfrac{\cos 0}{1} = 1.
+        \]
+        This matches our calculation from Section 2.6.\\
+\end{example}
+
+\begin{exercise}
+        Use L'H\^opital's Rule to compute the other important trig limit\\
+        $ $\\
+        $\dlim_{x \to 0} \dfrac{1 - \cos x}{x} = $
+         
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+        Ccompute the following limits.
+        Make sure to \textbf{first check} that the rule actually applies.
+        \begin{enumerate}[(a)]
+        \item $\dlim_{x \to 2} \dfrac{x^3 - 8}{x^4 - x^3 - 8}$
+                \vfill
+        \item $\dlim_{x \to 0} \dfrac{1 - \cos x}{x^2}$
+                \vfill
+        \item $\dlim_{x \to 3} \dfrac{x - 3}{x}$
+                \vfill
+        \item $\dlim_{x \to \infty} \dfrac{ \ln x}{\sqrt{x}}$
+                \vfill
+        \item $\dlim_{x \to \infty} \dfrac{e^x}{x}$
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+        Use L'H\^opital's Rule to find any horizontal asymptotes of the following functions.
+        \begin{enumerate}[(a)]
+        \item $f(x) = \dfrac{8x^3 - 4x+\pi}{-3x^3 + 7x^2 + 5}$
+                \vfill
+        \item $g(x) = \dfrac{3e^{2x} + 5x}{e^{2x} + 8x}$
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+\end{document}

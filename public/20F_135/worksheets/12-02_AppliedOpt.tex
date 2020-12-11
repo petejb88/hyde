@@ -1,0 +1,190 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{csquotes}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Applied Optimization},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 12-02: Applied Optimization}
+\end{center}
+
+\thispagestyle{empty}
+
+
+\renewcommand{\thesection}{\Alph{section}}
+
+Today we will be applying our optimization techniques (EVT and others) to solve word problems.
+\begin{itemize}
+\item The goal for all of these questions is to translate the word problem into a math question of the form
+        ``where is this function of one variable maximized/minimized?''
+        This process has many steps: finding the function at hand (and if necessary converting it into a function of one variable), considering the domain, and applying the EVT (or related analysis).
+\item Word problems are hard! They are hard for everyone --- students, grad students, professors, economists, politicans, doctors --- everyone.
+        It is okay to get discouraged or frustrated. But these are the most important questions: applying calculus techniques and problem solving skills to the ``real world''.
+        No one is going to offer you a job because you can take the derivative of a function, but a good problem solver is indispensable. 
+\end{itemize}
+
+
+\begin{exercise}
+        A farmer has 2400 feet of fencing and wants to use it to fence off a rectangular field. What are the dimensions of the field that has the largest area, and what is that largest area?\\
+        \textit{Remember, the goal is to model this situation with a fucntion of one variable, and then optimize this function.}
+        \begin{enumerate}[(a)]
+        \item Draw a picture of several possible fields. Label the pictures by assigning variables to any quantities that change. List any other variablese that might be important.
+                \vfill
+                \vfill
+                \vfill
+        \item Which quantity from Part (a) is the one that we want to maximize?
+                \vfill
+        \item Use basic geometry to write a formula for the variable you named in Part (b), in terms of other variables you identified from Part (a).
+                You may end up with a function that has two input variables --- that's okay! We will fix that in the next step.
+                \vfill
+                \vfill
+                \newpage
+        \item Turn the constraint that we have only 2400 feet of fencing into an equation involving your variables from Part (a).
+                Then use this equation to eliminate one of the variables from your function in Part (c).
+                \textit{Your result should be a function of one variable, and this is the function to maximize.}
+                \vfill
+                \vfill
+        \item What is the domain of your function, \textbf{in the context of this problem?}
+                (You can allow for ``silly'' rectangles with no area.)
+                \vfill
+        \item Use one of the procedures you know to find the absolute max value on the domain.
+                \textit{(Does the EVT apply? If not, what is the concavity of this function on the domain?)}
+                \vfill
+                \vfill
+        \item Answer the questions asked: what are the dimensions of the field that has the largest area, and what is that largest area?
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+        A farmer has 2400 feet of fencing, and this time wants to fence off a rectangular field that borders a straight river. The farmer needs no fence along the river.
+        What are the dimensions of the field that has the largest area, and what is that largest area?
+        (This problem is similar to Exercise 1; use the same sequence of steps in your solution.)
+        Explain why your answer is different from Exercise 1.
+\end{exercise}
+
+\newpage
+
+\begin{exercise}
+        A jeweler wants to make a square-bottomed box with no top that has a volume of 500 cm$^3$.
+        What are the dimensions that minimize the surface area of the box?
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        The same jeweler wants another square-bottomed box with no top with the same volume of 500cm$^3$.
+        But this time, the material for the bottom costs \$2 per cm$^2$ while the sides cost \$1 per cm$^2$.
+        In this case, what dimensions give the box with the lowest cost?
+        \vfill
+\end{exercise}
+
+\end{document}

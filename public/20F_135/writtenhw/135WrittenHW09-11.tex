@@ -1,0 +1,149 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+\let\sqrt=\undefined
+\DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}}
+\def\@x@sqrt#1#2{%
+ \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+ \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Written HW 1},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+\numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large Written Homework 2: Due Friday September 11}
+\end{center}
+
+\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+\subsection*{Directions:}
+Write your solutions neatly and clearly, and submit to Canvas.
+In these problems, you should show all of your work in complete mathematical "sentences", writing complete English sentences when you explain your logic.
+You are free (and encouraged!) to work with others, but make sure the solutions you write up your solutions indepedently.
+
+\begin{exercise}
+        Fill in the black with ``all'', ``no'', or ``some'' to make the following statements true.
+        \begin{itemize}
+        \item If your answer is ``all'', explain why.
+        \item If your answer is ``no'', given an example and explain.
+        \item If you answer is ``some'', give two examples that demonstrate when the statement is true and when it is false. Explain your examples.
+        \end{itemize}
+        Note: an example must include either a graph or a specific function.
+        \begin{enumerate}[(a)]
+        \item For \underline{\qquad} real numbers $x$, $(x+2)^4 = x^4 + 16$.
+        \item For \underline{\qquad} real numbers $x$, $\sqrt{x^4+8x^2+16} = x^2 + 4$.
+        \item For \underline{\qquad} real numbers $x$, if $(x+2)(x-3) = 2$, then $x+2 = 2$ and $x-3 = 2$.
+        \item For \underline{\qquad} functions $f$ and $g$, if $f$ and $g$ are both even functions, then $f+g$ is even.
+        \item For \underline{\qquad} triples of real numbers $k$, $x$, and $y$, if $x<y$, then $kx < ky$.
+        \end{enumerate}
+\end{exercise}
+
+$ $
+
+\begin{exercise}
+        An electric company charges its customers a fixed base charge of \$6 per month, plus 10 cents per kilowatt-hour (kWh) for the first 400 kWh, 11 cents per kWh for the next 500 kWh, and 15 cents for all additional kWh.
+        \begin{enumerate}[(a)]
+        \item Express the monthly cost $E$ as a function of the amount $x$ of electricity used.
+        \item Graph the function $E$ for $0 \leq x \leq 2000$.
+        \item Explain how your graph represents your function $E$.
+        \end{enumerate}
+\end{exercise}
+
+\end{document}
+
+

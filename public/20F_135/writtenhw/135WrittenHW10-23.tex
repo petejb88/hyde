@@ -1,0 +1,155 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+\let\sqrt=\undefined
+\DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}}
+\def\@x@sqrt#1#2{%
+ \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+ \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Written HW 10-23},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large Written Homework 10-23}
+\end{center}
+
+\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+\subsection*{Directions:}
+Write your solutions neatly and clearly, and submit to Canvas.
+In these problems, you should show all of your work in complete mathematical "sentences", writing complete English sentences when you explain your logic.
+You are free (and encouraged!) to work with others, but make sure the solutions you write up your solutions indepedently.
+
+\begin{exercise}[2 points]
+        The equation
+        \begin{equation}
+                \label{DIFF_EQ}
+                y'' = - A^2y
+        \end{equation}
+        is called a \textbf{differential equation}
+        because it involves an unknown function $y$ and its derivatives $y'$ and $y''$.
+        Prove that $y = \sin(Ax)$ satisfies Equation \cref{DIFF_EQ}.
+        Find one additional solution (i.e. another function $y$ that satisfies Equation \cref{DIFF_EQ}).
+\end{exercise}
+
+\begin{exercise}[4 points]
+        Fill in the blank with ``all'', ``no'', or ``some'' to make the following statements true.
+        Note that ``some'' means one or more instances, but not all.
+
+        \begin{itemize}
+        \item If your answer is ``all'' or ``no'', give an example (graphically or algebraically) and a brief explaination as to why.
+        \item If your answer is ``some'', then give two specific examples (graphically or algebraically) that illustrate why your answer is not ``all'' or ``no'', as well as a brief explaination.
+        \end{itemize}
+
+        \begin{enumerate}[(a)]
+        \item For \underline{\qquad} functions $f$, if $f''(x) > 0$ on the interval $(a,b)$ then $f'(x) < 0$ on the interval $(a,b)$.
+        \item For \underline{\qquad} functions $f$, the tangent line to $f(x)$ at $x = a$ will intersect the graph of $f(x)$ at exactly one point.
+        \end{enumerate}
+\end{exercise}
+
+\begin{exercise}[4 points]
+        A mayor announces that the town's expenses are increasing, but at a decreasing rate. Interpret this statement in terms of a function and its derivatives.
+\end{exercise}
+\end{document}
+
+

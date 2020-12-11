@@ -1,0 +1,278 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in,bottom=0in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+\usepackage{setspace}
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Project 3},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+\numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}{Exercise}
+\newtheorem{problem}{Problem}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+\DeclareMathOperator{\sech}{sech}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\onehalfspacing
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large Project 3: Approximating Functions}\\
+        Due: \textbf{Friday, Dec 11} by 11:59pm.
+\end{center}
+
+\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+
+\section*{The Project}
+
+In this project, you will investigate the function $f(x) = e^x \sin(x)$ on the domain $[-2\pi, 2\pi]$, as well as several approximations of this function.
+
+\subsection*{Components}
+
+For this project, you will need to submit mathematical solutions to various questions, as well as a single graph.
+You must submit your project as a single file or Google Document.
+
+For these questions, you must \textbf{show all work}, and use the Calculus techniques discussed in class. Answers not supported in this way will \textbf{not} be accepted.
+
+$ $
+
+\section{The function $f(x) = e^x \sin(x)$ [40 points]}
+
+
+\begin{problem}
+        Find all critical points of $f(x)$ on $[-2\pi, 2\pi]$. How many are there?
+\end{problem}
+
+\begin{problem}
+        Create a sign chart for the first derivative of $f(x)$ on $[-2\pi, 2\pi]$. Show all work.
+\end{problem}
+
+\begin{problem}
+        Create a sign chart for the second derivative of $f(x)$ on $[-2\pi, 2\pi]$. Show all work. Find the inflection points on $[-2\pi, 2\pi]$. How many are there?
+\end{problem}
+
+\begin{problem}
+        Classify the critical points of $f(x)$ on $[-2\pi, 2\pi]$ using both the First and Second Derivative Tests.
+\end{problem}
+
+\begin{problem}
+        Find the absolute maximum and absolute minimum values of $f(x)$ on $[-2\pi, 2\pi]$ using the Extreme Value Theorem.
+\end{problem}
+
+$ $
+
+\section{Approximations of $f(x) = e^x \sin(x)$ [45 points]}
+
+\subsection{Linearization}
+The \textit{linearization} of a function $f(x)$ at $x = a$ is a linear function
+\[
+        L(x) = A + Bx
+\]
+such that
+\[
+        L(a) = f(a), \qquad L'(a) = f'(a).
+\]
+$L(x)$ gives the best approximation of $f(x)$ near $x = a$ as a line.
+
+\begin{problem}
+        Find $L(x)$ for $f(x) = e^x \sin(x)$ at $x = 0$. Show all work.\\
+        \textit{(Hint: We know that $L(x)$ must be of the form $A+ Bx$. Can we use the properties of $L(x)$ listed above to find the values of $A$ and $B$?)}
+\end{problem}
+
+\begin{problem}
+        How many critical points does $L(x)$ have in $[-2\pi, 2\pi]$?
+        How many inflection points does $L(x)$ have in $[-2\pi, 2\pi]$?        
+\end{problem}
+
+\begin{problem}
+        Compute the absolute max and min values of $L(x)$ on $[-2\pi, 2\pi]$ using the EVT.
+\end{problem}
+
+\newpage
+
+\subsection{Quadratic approximation}
+The \textit{quadratic approximation} of a function $f(x)$ at $x = a$ is a quadratic function
+\[
+        Q(x) = A + Bx + Cx^2
+\]
+such that
+\[
+        Q(a) = f(a),
+        \qquad
+        Q'(a) = f'(a),
+        \qquad
+        Q''(a) = f''(a).
+\]
+$Q(x)$ gives the best approximation of $f(x)$ near $x = a$ as a parabola.
+
+\begin{problem}
+        Find $Q(x)$ for $f(x) = e^x \sin(x)$ at $x = 0$. Show all work. \\
+        \textit{(Hint: Can we use the properties of $Q(x)$ listed above to find the necessary values of $A$, $B$, and $C$?)}
+\end{problem}
+
+\begin{problem}
+        How many critical points does $Q(x)$ have in $[-2\pi, 2\pi]$?
+        How many inflection points does $Q(x)$ have in $[-2\pi, 2\pi]$?        
+\end{problem}
+
+\begin{problem}
+         Compute the absolute max and min values of $Q(x)$ on $[-2\pi, 2\pi]$ using the EVT.
+\end{problem}
+
+$ $ 
+
+\subsection{Cubic approximation}
+The \textit{cubic approximation} of a function $f(x)$ at $x = a$ is a cubic function
+\[
+        P(x) = A + Bx + Cx^2 + Dx^3
+\]
+such that
+\[
+        P(a) = f(a), \qquad
+        P'(a) = f'(a), \qquad
+        P''(a) = f''(a), \qquad
+        P'''(a) = f'''(a).
+\]
+$P(x)$ is the best approximation of $f(x)$ near $x = a$ as a cubic function.
+
+\begin{problem}
+        Find $P(x)$ for $f(x) = e^x \sin(x)$ at $x = 0$. Show all work.\\
+        \textit{(Hint: Can we use the properties of $O(x)$ listed above to find the necessary values of $A$, $B$, $C$, and $D$?)}
+\end{problem}
+
+\begin{problem}
+        How many critical points does $P(x)$ have in $[-2\pi, 2\pi]$?
+        How many inflection points does $P(x)$ have in $[-2\pi, 2\pi]$?        
+\end{problem}
+
+\begin{problem}
+         Compute the absolute max and min values of $P(x)$ on $[-2\pi, 2\pi]$ using the EVT.
+\end{problem}
+
+$ $
+
+\subsection{Graph}
+
+\begin{problem}
+        Using Desmos, plot $f(x)$, $L(x)$, $Q(x)$, and $P(x)$ on the same set of axes. Make sure the domain is at least $[-2\pi, 2\pi]$.
+\end{problem}
+
+$ $
+
+\section{General Approximations [15 points]} 
+
+Suppose $f(x)$ is a function such that $f(x)$, $f'(x)$, $f''(x)$, and $f'''(x)$ are all continuous,
+and let $x = a$ be some point in the domain of $f$.
+
+The following formula should be in terms of $a$, $f(a)$, $f'(a)$, $f''(a)$, and $f'''(a)$.
+
+\begin{problem}
+        Find a general rule for $L(x)$.
+\end{problem}
+
+\begin{problem}
+        Find a general rule for $Q(x)$.
+\end{problem}
+
+\begin{problem}
+        Find a general rule for $P(x)$.
+\end{problem}
+
+\end{document}

@@ -1,0 +1,236 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{csquotes}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Related Rates},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 11-06:  Related Rates (Section 3.10)}
+\end{center}
+
+\thispagestyle{empty}
+
+
+\renewcommand{\thesection}{\Alph{section}}
+
+% \vspace{-1pt}
+
+The \textbf{derivative} $f'(x)$ of a function $y=f(x)$ gives:
+\begin{itemize}
+\item the slope of the tangent line
+\item the instantaneous rate of change of $y$ with respect to $x$
+\end{itemize}
+
+
+\section{Related Rates}
+
+If two quantities are:
+\begin{enumerate*}[(i)]
+\item related by some equation, and
+\item are \textbf{both} changing with respect to another quantity,
+\end{enumerate*}
+then we can use the given equation and the chain rule to 'relate their rates''.
+
+
+Let's go through an example together:
+\begin{example}      
+        Suppose that each side of a square is increasing at a constant rate of 10 $\mathrm{cm}^2/\mathrm{sec}$.
+        At what rate is the area increasing when the area of the square is 36 cm$^2$?
+        \begin{enumerate}[(a)]
+        \item \textbf{Diagram:} Draw a picture of the square. Label the variables of interest.
+                \vfill
+        \item \textbf{Rates:} What rate of change is given to us in the statement of the problem?
+                What rate of change are we asked to compute?
+                \vfill
+        \item \textbf{Equation:} Write an equation from geometry that relates the variables $A$ and $x$.
+                \vfill
+        \item \textbf{Differentiate:} Both the area and the side lengths are increasing as a function of time.
+                Use implicit differentiation to take the derivative of the formula from Part (c) with respect to time $t$.
+                \vfill
+        \item \textbf{Substitute and Solve:} Plug all known quantities into your quation from Part (d),
+                and solve for the desired rate. Answer the question asked.
+                \vfill
+        \end{enumerate}
+\end{example}
+
+\newpage
+
+
+\begin{exercise}
+        A spherical snowball melts in such a way that the instant at which its radius is 20cm, its radius is decreasing at 3 cm/min.
+        At what rate is the volume of the ball of snow changing at that instant?
+        \begin{enumerate}[(a)]
+        \item \textbf{Diagram:} Draw a picture of the melting snowball. Label the variables of interest.\\
+                \textit{(Hint: the statement of the problem mentions three variables. What are they?)}
+                \vfill
+                \vfill
+        \item \textbf{Rates:} What rate of change is given to us in the statement of the problem?
+                What rate of change are we asked to compute?
+                Include units.
+                \vfill
+        \item \textbf{Equation:} The rates in the previous part involved the variables $V$ and $r$.
+                Write an equation from geometry relating $V$ and $r$.
+                \vfill
+        \item \textbf{Differentiate:} Because the snowball is melting, both the radius and volume are functions of time.
+                Use implicit differentiation to take the derivative of your formula from Part (c) with respect to time $t$ in minutes.
+                \vfill
+        \item \textbf{Substitute and Solve:} Plug all known quantities into your equation from Part (d) and solve for the desired rate.
+                Answer the question asked.
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+\newpage
+
+
+\begin{exercise}
+        Omar flies his kite 150m high, where the wind causes it to move horizontally away from him at the rate of 5m per second.
+        In order to maintain the kite at a height of 150m, Omar must allow more string to be let out.
+        At what rate is the string being let out when the length of the string already out is 250m?
+        \begin{enumerate}[(a)]
+        \item \textbf{Diagram:}
+                \vfill
+                \vfill
+        \item \textbf{Rates:}
+                \vfill
+        \item \textbf{Equation:}
+                \vfill
+        \item \textbf{Differentiate:}
+                \vfill
+        \item \textbf{Substitute and Solve:}
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+\newpage
+
+
+\begin{exercise}
+        On the shore sits Sea Lion Rock.
+        A lighthouse stands off-shore, 100 yards east of Sea Lion Rock.
+        173 yards due north of Sea Lion Rock is the exclusive Sea Lion Motel.
+        The lighthouse light rotates twice a minute. At the moment the beam of light hits the motel, how fast is the beam of light moving along the coast?
+        % \begin{enumerate}[(a)]
+        % \item \textbf{Diagram:}
+        %         \vfill
+        %         \vfill
+        % \item \textbf{Rates:}
+        %         \vfill
+        % \item \textbf{Equation:}
+        %         \vfill
+        % \item \textbf{Differentiate:}
+        %         \vfill
+        % \item \textbf{Substitute and Solve:}
+        %         \vfill
+        % \end{enumerate}
+\end{exercise}
+
+
+\end{document}

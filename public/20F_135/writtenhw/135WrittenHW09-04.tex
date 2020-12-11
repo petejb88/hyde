@@ -1,0 +1,217 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+\let\sqrt=\undefined
+\DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}}
+\def\@x@sqrt#1#2{%
+ \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+ \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Written HW 1},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+\numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large Written Homework 1 (Survey)}
+\end{center}
+
+\thispagestyle{empty}
+
+\renewcommand{\thesection}{\Alph{section}}
+
+This week's Written Homework serves two purposes:
+\begin{enumerate*}[(a)]
+\item you get to figure out how to submit assignments to Canvas, and
+\item I get to learn a bit about you.
+\end{enumerate*}
+You can submit this to Canvas however you wish:
+print, fill out, and scan;
+fill out electronically;
+or write answers on a blank piece of paper and scan.
+However, Canvas will only accept PDF documents. There are apps to convert from pictures to PDFs, or take pictures as PDFs, if necessary.
+
+Please feel free to email me ({\color{blue}pbonvent@holycross.edu}) if you have any questions.
+
+\section{About You}
+
+\begin{question}
+        What is your name? How would you like to be addressed? What are your preferred pronouns?\\ $ $\\
+\end{question}
+
+\begin{question}
+        What is your class year? Major? \\ $ $\\
+\end{question}
+
+\begin{question}
+        What is your hometown? \\ $ $\\
+\end{question}
+
+\begin{question}
+        What is your favorite book? Favorite Disney movie?\\ $ $\\
+\end{question}
+
+\begin{question}
+        Anything else you would like me to know about you? \\ $ $\\
+\end{question}
+
+\section{You and Math}
+
+\begin{question}
+        What is your previous math experience? \vfill
+\end{question}
+
+\begin{question}
+        Why are you taking this class? \vfill
+\end{question}
+
+\begin{question}
+        What are your long-term math plans? \vfill
+\end{question}
+
+\begin{question}
+        What worries you most about this class? \vfill
+\end{question}
+
+\newpage
+
+\section{Distance Learning}
+
+\begin{question}
+        What is your experience with taking classes online?
+        \vfill        
+\end{question}
+
+The sychronous portion of this course will be though the Zoom software.
+\begin{question}
+        How comfortable are you with using Zoom, or other online video conferencing/classroom systems?
+        \vfill
+\end{question}
+
+If possible, I would like all students to use a tablet or laptop to attend class.
+Additionally, in order to promote a collaborative environment for groupwork, I will be requesting that all students keep their videos \textbf{on} for the duration of the class.
+\begin{question}
+        How will you be accessing Zoom? \\ $ $\\
+\end{question}
+
+\begin{question}
+        Do you have any concerns related to the technology/devices you will be using/asked to use to complete work in this course?Is this something you will be able to accommodate?
+        (Potential complications could include: access to necessary technology, internet stability, lack of appropriate working space at home, etc).
+        \vfill
+\end{question}
+
+\begin{question}
+        What else do you want me to know about you so that I can support you to succeed this term?
+        \vfill
+\end{question}
+
+I will strive to find a productive and amenable arrangment with each student that works for everyone.
+
+
+\section{About This Class}
+
+\begin{question}
+        Please answer the following True/False questions:
+        \begin{enumerate}[(a)]
+        \item I will be lecturing in class every day \qquad \textbf{T} \quad / \quad \textbf{F}\\
+        \item The majority of time in class will be spent with students quiet and me talking \qquad \textbf{T} \quad / \quad \textbf{F}\\
+        \item Students are expected to prepare for class by completing an assignment beforehand \qquad \textbf{T} \quad / \quad \textbf{F}\\
+        \item Students are encouraged to work together on WebAssign and Written Homework \qquad \textbf{T} \quad / \quad \textbf{F}\\
+        \item Students are encouraged to work together on quizzes \qquad \textbf{T} \quad / \quad \textbf{F}
+        \end{enumerate}
+\end{question}
+
+\end{document}
+
+

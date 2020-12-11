@@ -1,0 +1,276 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{csquotes}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Higher Derivatives and Trig Derivatives},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 10-16: Higher Order Derivatives (Section 3.5) and Trig Derivatives (Section 3.6)}
+\end{center}
+
+\thispagestyle{empty}
+
+
+\renewcommand{\thesection}{\Alph{section}}
+
+% \vspace{-1pt}
+
+Last week, we introduced the \textbf{derivative function} $f'(x)$ of a function $f(x)$, whose evaluation $f'(a)$ at the point $x=a$ is give by:
+\begin{itemize}
+\item the slope of the tangent line at $x=a$
+\item the instantaneous velocity at time $x = a$
+\item the instantaneous rate of change of $f$ with respect to $x$
+\end{itemize}
+
+Today, we'll be discussing \textbf{higher order derivatives} and the derivatives of \textbf{trig functions}.
+
+\section{Higher Derivatives}
+
+The derivative $f'(x)$ of a function $f(x)$ gives the \textbf{slope} of the function $f$ at the point $x$.
+However, $f'(x)$ is also a function, and so we can ask: ``What is the derivative of the derivative?''
+
+\begin{definition}
+        The \textbf{second derivative} of $f(x)$ is the function
+        \begin{framed}
+                \[
+                        f''(x) = \dfrac{d}{dx}\big( f'(x) \big) = \dfrac{d^2f}{dx^2} = \dfrac{d^2y}{dx^2}.                
+                \]
+        \end{framed}
+\end{definition}
+To compute the second derivative, we simply take the derivative twice.
+
+\begin{exercise}
+        Suppose that $f(x) = 2x^4-3x+e^x$. Find $f'(x)$ and $f''(x)$.
+        \vfill
+\end{exercise}
+
+\subsection{The second derivative and concavity}
+
+The second derivative measures the change in $f'(x)$, i.e. the change in the slope of $f(x)$.
+What does this really mean?
+
+Recall:
+\begin{itemize}
+\item $\dfrac{d}{dx}(f)|_{x=a} > 0 \quad \Leftrightarrow \quad$
+        the slope is positive at $x=a$ $\quad \Leftrightarrow \quad$
+        $f(x)$ is \textbf{increasing} at $x=a$
+\item $\dfrac{d}{dx}(f)|_{x=a} < 0 \quad \Leftrightarrow \quad$
+        the slope is negative at $x=a$ $\quad \Leftrightarrow \quad$
+        $f(x)$ is \textbf{decreasing} at $x=a$
+\end{itemize}
+
+If $f''(a) >0$, then $\dfrac{d}{dx}(f')|_{x=a}>0$, so the slopes of $f$ are increasing at $x=a$.
+There are two options:
+\begin{itemize}
+\item If the slopes are already positive, then they are getting bigger, so the curve is getting steeper, increasing at a faster rate (like $e^x$)
+\item If the slopes are negative, then the function $f(x)$ is still decreasing, but beginning to flatten out: the negative slopes are increasing towards (and possibly past) zero.
+\end{itemize}
+In these cases, we say the graph of $f$ is \textbf{concave up} at $x=a$.
+
+Similarly, the reverse options can happen if $f''(a)<0$, and the graph is \textbf{concave down}.
+
+\newpage
+
+\begin{exercise}
+        Sketch the graph of a function $g$ such that $g'(x) < 0$ and $g''(x) > 0$ everywhere.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        Former President Nixon famously said,
+        ``Although the rate of inflation is increasing, it is increasing at a decreasing rate.''
+        Let $r(t)$ denote the rate of inflation.
+        According to President Nixon, what are the signs ($+$, $-$, or 0)
+        of $r'(t)$ and $r''(t)$?\\[10pt]        
+\end{exercise}
+
+\subsection{Higher Derivatives}.
+
+In good cases, we can continue to take derivatives of derivatives.
+\begin{itemize}
+\item We write $f'''(x)$ for the \textbf{third derivative} $\dfrac{d}{dx}(f''(x))$.
+\item More generally, we write $f^{(n)}(x)$ for the \textbf{$n$-th derivative} of $f(x)$.
+\end{itemize}
+
+\begin{exercise}
+        Suppose that $f(x) = xe^x$.
+        \begin{enumerate}[(a)]
+        \item Find and simplify $f'(x)$, $f''(x)$, and $f'''(x)$.
+                \vfill
+        \item Find a general formula, in terms of $n$, of the $n$-th derivative $f^{(n)}(x)$.
+                \vfill
+        \end{enumerate}
+\end{exercise}
+
+
+\begin{exercise}
+        The inflation rate is given by the (positive) rate of change of the \textbf{consumer price index}.
+        Let $p(t)$ denote the consumer price index.
+        According to Nixon, what are the signs ($+$, $-$, or 0) of $p'(t)$, $p''(t)$, and $p'''(t)$?\\[10pt]
+\end{exercise}
+
+\begin{exercise}
+        A news report out of Massachusetts yesterday said:
+        \begin{displayquote}
+                The total number of COVID cases that were confirmed last week grew to 4,560 today.
+                That's a 12\% increase over the previous week
+                and an 83\% increase in cases over the week of Sept. 13, when cases began to rise at a higher rate.        
+        \end{displayquote}
+        Let $N(t)$ denote the cumulative total number of cases of COVID-19 in Massachusetts.
+        What derivative of $N$ went from negative to positive on September 13?
+        Using evidence from the news article, is that derivative still positive?
+        \vfill
+\end{exercise}
+
+\newpage
+
+\section{Trig Derivatives}
+
+Using the trig identities $\sin(A+B) = \sin A \cdot \cos B + \cos A \sin B$,
+along with the trig limits $\dlim_{x \to 0}\dfrac{\sin x}{x} = 1$ and $\dlim_{x \to 0}\dfrac{1 - \cos x}{x} = 0$,
+we can compute the derivatives of $\sin(x)$ and $\cos(x)$:
+
+\begin{theorem}
+        If $x$ is measured in radians, then
+        \begin{framed}
+                \[
+                        \dfrac{d}{dx}(\sin x) = \cos x,
+                        \qquad \qquad
+                        \dfrac{d}{dx}(\cos x) = -\sin x.
+                        \]
+        \end{framed}
+\end{theorem}
+
+To prove the first formula, let $f(x) = \sin x$. Then
+\begin{align*}
+  f'(x) &= \dlim_{h \to 0} \dfrac{\sin(x+h) - \sin(x)}{h}\\
+        &= \dlim_{h \to 0} \dfrac{\sin x \cdot \cos h + \cos x \cdot \sin h - \sin x}{h}\\
+        &= \dlim_{h \to 0} \dfrac{ \sin x \cdot (\cos h - 1) + \cos x \cdot \sin h}{h}\\
+        &= \dlim_{h \to 0} \sin x \cdot \dfrac{\cos h - 1}{h} \quad + \quad \dlim_{h \to 0} \cos x \cdot \dfrac{\sin h}{h}\\
+        &= \sin x \cdot 0 + \cos x \cdot 1\\
+        &= \cos x.          
+\end{align*}
+
+\begin{exercise}
+        Use the quotient rule and the above results to prove that $\dfrac{d}{dx}(\tan x) = \sec^2 x$.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        Show that $\dfrac{d}{dx}(\sec x) = \sec x \cdot \tan x$.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        If $g(x) = x^3 \sin x$, find a simplify $g'(x)$ and $g''(x)$.
+        \vfill
+\end{exercise}
+
+\end{document}

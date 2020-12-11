@@ -1,0 +1,187 @@
+\documentclass[11pt,reqno,final]{amsart}
+
+\pdfcompresslevel=0
+\pdfobjcompresslevel=0
+
+\usepackage[dvipsnames]{xcolor}% adds colors
+\usepackage{amsmath, amsthm}% {amsfonts, amssymb}
+
+% New Characters
+\usepackage[latin1]{inputenc}%
+\usepackage[T1]{fontenc}
+
+\usepackage{MnSymbol}
+\usepackage[normalem]{ulem}% underlining
+
+\usepackage[theoremfont, largesc]{newpxtext} % different text,math font
+\usepackage{newpxmath}
+
+\makeatletter
+\DeclareMathRadical{\sqrtsign}{symbols}{112}{largesymbols}{112}
+% \let\sqrt=\undefined
+% \DeclareRobustCommand\sqrt{\@ifnextchar[\@sqrt{\mathpalette\@x@sqrt}]}
+% \def\@x@sqrt#1#2{%
+%  \setbox\z@\hbox{$\m@th#1\sqrtsign{\mkern1mu #2}$}
+%  \mkern3mu\box\z@}
+\makeatother
+
+
+
+
+% Page Typesetting
+\usepackage[final]{microtype}
+\usepackage{relsize}
+\usepackage[margin=1in]{geometry}
+\usepackage{framed}
+\usepackage{tikz}
+
+\usepackage{csquotes}
+
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{hyperref}
+\hypersetup{
+  final,
+  pdftitle={Math 135 - Chain Rule},
+  pdfauthor={Bonventre}, 
+  linktoc=page,
+  pagebackref,
+  colorlinks=true,
+  citecolor=PineGreen,
+  linkcolor=PineGreen,
+  linkbordercolor=PineGreen,
+}
+
+
+% Internal References
+
+\usepackage[inline,shortlabels]{enumitem}
+
+% \numberwithin{equation}{section} 
+\numberwithin{figure}{section}
+
+\usepackage[nameinlink,capitalise,noabbrev]{cleveref}
+
+\crefname{equation}{}{} % get \cref to behave as \eqref
+
+% \theoremstyle{plain} % bold name, italic text
+\newtheorem{theorem}[equation]{Theorem}%
+\newtheorem*{theorem*}{Theorem}%
+\newtheorem{lemma}[equation]{Lemma}%
+\newtheorem{proposition}[equation]{Proposition}%
+\newtheorem{corollary}[equation]{Corollary}%
+\newtheorem{conjecture}[equation]{Conjecture}%
+\newtheorem*{conjecture*}{Conjecture}%
+\newtheorem{claim}[equation]{Claim}%
+\newtheorem{question}{Question}
+
+\theoremstyle{definition} % bold name, plain text
+\newtheorem{definition}[equation]{Definition}%
+\newtheorem*{definition*}{Definition}%
+\newtheorem{example}[equation]{Example}%
+\newtheorem*{example*}{Example}%
+\newtheorem{remark}[equation]{Remark}%
+\newtheorem{notation}[equation]{Notation}%
+\newtheorem{convention}[equation]{Convention}%
+\newtheorem{assumption}[equation]{Assumption}%
+\newtheorem{exercise}[question]{Exercise}
+
+% ---------- macros
+\newcommand{\set}[1]{\left\{#1\right\}}%
+\newcommand{\sets}[2]{\left\{ #1 \;|\; #2\right\}}%
+\newcommand{\longto}{\longrightarrow}%
+\newcommand{\into}{\hookrightarrow}%
+\newcommand{\onto}{\twoheadrightarrow}%
+
+\usepackage{harpoon}
+\newcommand{\vect}[1]{\text{\overrightharp{\ensuremath{#1}}}}
+
+\newcommand{\del}{\partial}%
+
+\newcommand{\ki}{\chi}
+\newcommand{\ksi}{\xi}
+\newcommand{\Ksi}{\Xi}
+
+\newcommand{\dlim}{\displaystyle\lim}
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+        \textbf{\Large Math 135, Calculus 1, Fall 2020}\\[10pt]
+        {\large 10-21: The Chain Rule, Part II (Section 3.7)}
+\end{center}
+
+\thispagestyle{empty}
+
+
+\renewcommand{\thesection}{\Alph{section}}
+
+% \vspace{-1pt}
+
+Last week, we introduced the \textbf{derivative function} $f'(x)$ of a function $f(x)$, whose evaluation $f'(a)$ at the point $x=a$ is give by:
+\begin{itemize}
+\item the slope of the tangent line at $x=a$
+\item the instantaneous velocity at time $x = a$
+\item the instantaneous rate of change of $f$ with respect to $x$
+\end{itemize}
+
+Today: More with the chain rule.
+\section{Chain Rule}
+
+The chain rule gives us a way to compute the derivative of a \textbf{composite} of two functions.
+\begin{theorem}
+        If $O(x)$ and $I(x)$ are differentiable functions, then so is the composite $O(I(x)) = (O \circ I)(x)$.
+        Moreover,
+        \begin{framed}
+                \[
+                        \dfrac{d}{dx}\Big( O(I(x)) \Big) = O'\big( I(x) \big) \cdot I'(x).
+                \]
+        \end{framed}
+\end{theorem}
+
+\begin{exercise}
+        Compute the derivative of $f(x) = \sin(x^2)$.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        Suppose that $h(x) = f(g(x))$, and that $f'(3) = 4$, $f(3) = 2$, $f'(6) = -1$, $g(3) = 6$, $g'(3) = 7$, $g(2) = 4$, and $g'(2) = 11$.
+        Find $h'(3)$.
+        \vfill
+\end{exercise}
+
+\newpage
+
+\subsection*{Leibniz Notation}
+If $y = f(x)$ and $x = g(t)$, then $y$ is a function of $t$ by $y = f(g(t))$.
+By the Chain Rule, we have that
+$\frac{dy}{dt} = f'(g(t)) \cdot g'(t)$, or more succinctly,
+\begin{framed}
+        \[
+                \dfrac{dy}{dt} = \dfrac{dy}{dx} \cdot \dfrac{dx}{dt}.
+        \]
+\end{framed}
+
+When computing the derivative of the inside function, you may need to use any of the derivative rules we have discussed so far:
+the product rule, quotient rule, or even the chain rule itself.
+
+\begin{exercise}
+        Compute $\dfrac{dy}{dt}$ when $y = \sqrt{\dfrac{t+1}{t-1}}$.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        Compute $\dfrac{d}{dt} \Big( \tan(\cos(e^{6t})) \Big)$.
+        \vfill
+\end{exercise}
+
+\begin{exercise}
+        Find and simplify $F'(x)$ if $F(x) = \sin(x^2)\cos(x^2)$.
+        \vfill
+\end{exercise}
+        
+\end{document}
