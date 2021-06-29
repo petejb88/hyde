@@ -240,7 +240,7 @@ a.sidebar-nav-item:focus {
   color: #30a2d1;
 }
 
-/* Purple (custom) */
+/* Holy Cross Purple (custom) */
 .theme-base-10 .sidebar {
   background-color: #602D89;
 }
@@ -268,3 +268,13 @@ a.sidebar-nav-item:focus {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+
+/* Georgetown Blue (custom) */
+.theme-base-1f .sidebar {
+  background-color: #041E42;
+}
+.theme-base-1f .content a,
+.theme-base-1f .related-posts li a:hover {
+  color: #30a2d1;
+}
+
