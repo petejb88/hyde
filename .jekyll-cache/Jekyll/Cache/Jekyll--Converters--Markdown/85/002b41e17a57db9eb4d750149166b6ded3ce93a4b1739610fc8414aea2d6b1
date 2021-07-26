@@ -1,6 +1,8 @@
-I"�/<h2 id="research-interests">Research Interests</h2>
+I"1<p><img src="public/pic2.jpg" alt="" border="0" style="width:500px" /></p>
 
-<p>I conduct pure mathematics research in algebraic topology, a field which aims to understand spaces by using algebraic invariants.
+<h2 id="research-interests">Research Interests</h2>
+
+<p>Most of my research is in algebraic topology, a field which aims to understand spaces by using algebraic invariants.
 Specifically, much of my published work is in stable homotopy theory and equivariant categorical algebra.
 I am drawn to questions of how to scaffold large and intricate problems, and build the tools that will be most effective to answer them.</p>
 
@@ -22,8 +24,39 @@ I am drawn to questions of how to scaffold large and intricate problems, and bui
 
 <h2 id="publications">Publications</h2>
 
+<p><strong>On the homotopy theory of equivariant colored operads</strong> (with Luís Pereira)<br />
+To appear in <em>Algebraic &amp; Geometric Topology</em>. <br />
+ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a> (submitted)
+<a href="#" id="ACOP-show" class="showLink" onclick="showHide('ACOP');return false;">(see abstract)</a></p>
+<div id="ACOP" class="more"> 
+We build model structures on the category of equivariant simplicial operads with weak equivalences determined by families of subgroups, in the context of operads with a varying set of colors (and building on the fixed color model structures in the prequel). In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads whose weak equivalences are determined by norm map data.
+<a href="#" id="ACOP-hide" class="hideLink" onclick="showHide('ACOP');return false;">(hide abstract)</a>
+<br />
+<br />
+</div>
+
+<p><b>Homotopy theory of equivariant operads with fixed colors</b> (with Luís Pereira) <br />
+To appear in <em>Tunisian Journal of Mathematics</em>.<br />
+ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a> (submitted)
+<a href="#" id="FCOP-show" class="showLink" onclick="showHide('FCOP');return false;">(see abstract)</a></p>
+<div id="FCOP" class="more"> 
+We build model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences determined by families of subgroups. In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences are determined by norm map data.
+<a href="#" id="FCOP-hide" class="hideLink" onclick="showHide('FCOP');return false;">(hide abstract)</a>
+</div>
+
+<p><strong>Rigidification of dendroidal infinity-operads</strong> (with Luís Pereira)<br />
+To appear in <em>Homology, Homotopy and Applications</em>.<br />
+ArXiv preprint: <a href="https://arxiv.org/abs/2004.12296">2004.12296</a>
+<a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">(see abstract)</a></p>
+<div id="WCON" class="more">
+We give an explicit description of the rigidification of an infinity-operad as a simplicial operad. This description is based on the notion of dendroidal necklace, extending work of Dugger and Spivak from the categorical context to the operadic context, although with a different framework, which relates constructions involving necklaces to a standard factorization of maps in the category of trees.
+<a href="#" id="WCON-hide" class="hideLink" onclick="showHide('WCON');return false;">(hide abstract)</a>
+<br />
+<br />
+</div>
+
 <p><strong>Genuine equivariant operads</strong> (with Luís Pereira)<br />
-To appear in <em>Advances in Mathematics</em>.
+<a href="https://doi.org/10.1016/j.aim.2020.107502"><em>Advances in Mathematics</em></a>, 381 (2021) No. 107502, 133 pp.<br /> 
 ArXiv preprint: <a href="https://arxiv.org/abs/1707.02226">1707.02226</a>
 <a href="#" id="GEO-show" class="showLink" onclick="showHide('GEO');return false;">(see abstract)</a></p>
 <div id="GEO" class="more"> 
@@ -34,19 +67,8 @@ As an application, we build explicit models for the N-infinity-operads of Blumbe
 <br />
 </div>
 
-<p><strong>Rigidification of dendroidal infinity-operads</strong> (with Luís Pereira)<br />
-To appear in <em>Homology, Homotopy and Applications</em>.
-ArXiv preprint: <a href="https://arxiv.org/abs/2004.12296">2004.12296</a>
-<a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">(see abstract)</a></p>
-<div id="WCON" class="more">
-We give an explicit description of the rigidification of an infinity-operad as a simplicial operad. This description is based on the notion of dendroidal necklace, extending work of Dugger and Spivak from the categorical context to the operadic context, although with a different framework, which relates constructions involving necklaces to a standard factorization of maps in the category of trees.
-<a href="#" id="WCON-hide" class="hideLink" onclick="showHide('WCON');return false;">(hide abstract)</a>
-<br />
-<br />
-</div>
-
 <p><strong>Equivariant dendroidal Segal spaces and G-infinity-operads</strong> (with Luís Pereira)<br />
-To appear in <em>Algebraic &amp; Geometry Topology</em>.
+<a href="https://doi.org/10.2140/agt.2020.20.2687"><em>Algebraic &amp; Geometry Topology</em></a>, 20 (2020), No. 6, 2687-2778.<br />
 ArXiv preprint: <a href="https://arxiv.org/abs/1801.02110">1801.02110</a>
 <a href="#" id="EDSS-show" class="showLink" onclick="showHide('EDSS');return false;">(see abstract)</a></p>
 <div id="EDSS" class="more">
@@ -57,7 +79,7 @@ We introduce the analogues of the notions of complete Segal space and of Segal c
 </div>
 
 <p><strong>The genuine operadic nerve</strong><br />
-<em>Theory and Applications of Categories</em>, Vol. 34, 2019, No. 26, pp 736–780.
+<em>Theory and Applications of Categories</em>, Vol. 34, 2019, No. 26, pp 736–780.<br />
  ArXiv preprint: <a href="https://arxiv.org/abs/1904.01465">1904.01465</a>
  <a href="#" id="GenOpNerve-show" class="showLink" onclick="showHide('GenOpNerve');return false;">(see abstract)</a></p>
 <div id="GenOpNerve" class="more">
@@ -76,16 +98,6 @@ S. Amanuel, H. Bauer, <strong>P. Bonventre</strong>, D. Lasher<br />
 <em>Journal of Physical Chemistry C</em>, 2009, 113(44), 18983-18986</p>
 
 <h2 id="preprints">Preprints</h2>
-
-<p><strong>On the homotopy theory of equivariant colored operads</strong> (with Luís Pereira)<br />
-ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a> (submitted)
-<a href="#" id="ACOP-show" class="showLink" onclick="showHide('ACOP');return false;">(see abstract)</a></p>
-<div id="ACOP" class="more"> 
-We build model structures on the category of equivariant simplicial operads with weak equivalences determined by families of subgroups, in the context of operads with a varying set of colors (and building on the fixed color model structures in the prequel). In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads whose weak equivalences are determined by norm map data.
-<a href="#" id="ACOP-hide" class="hideLink" onclick="showHide('ACOP');return false;">(hide abstract)</a>
-<br />
-<br />
-</div>
 
 <p><b>Additive power operations in equivariant cohomology</b> (with Bertrand J Guillou and Nathaniel J Stapleton) <br />
 ArXiv preprint: <a href="https://arxiv.org/abs/2001.11078">2001.11078</a> (submitted)
@@ -113,14 +125,6 @@ We establish a Quillen equivalence between the homotopy theories of equivariant 
 <a href="#" id="TAS-hide" class="hideLink" onclick="showHide('TAS');return false;">(hide abstract)</a>
 <br />
 <br />
-</div>
-
-<p><b>Homotopy theory of equivariant operads with fixed colors</b> (with Luís Pereira) <br />
-ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a> (submitted)
-<a href="#" id="FCOP-show" class="showLink" onclick="showHide('FCOP');return false;">(see abstract)</a></p>
-<div id="FCOP" class="more"> 
-We build model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences determined by families of subgroups. In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences are determined by norm map data.
-<a href="#" id="FCOP-hide" class="hideLink" onclick="showHide('FCOP');return false;">(hide abstract)</a>
 </div>
 
 <h2 id="other-writing">Other Writing</h2>
