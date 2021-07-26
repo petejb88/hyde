@@ -30,7 +30,7 @@ In addition to these projects in pure mathematics, other projects and interests 
 
 **On the homotopy theory of equivariant colored operads** (with Lu&#237;s Pereira)<br>
 To appear in _Algebraic & Geometric Topology_. <br>
-ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a> (submitted)
+ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a>
 <a href="#" id="ACOP-show" class="showLink" onclick="showHide('ACOP');return false;">(see abstract)</a>
 <div id="ACOP" class="more"> 
 We build model structures on the category of equivariant simplicial operads with weak equivalences determined by families of subgroups, in the context of operads with a varying set of colors (and building on the fixed color model structures in the prequel). In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads whose weak equivalences are determined by norm map data.
@@ -42,7 +42,7 @@ We build model structures on the category of equivariant simplicial operads with
 
 <b>Homotopy theory of equivariant operads with fixed colors</b> (with Lu&#237;s Pereira) <br>
 To appear in _Tunisian Journal of Mathematics_.<br>
-ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a> (submitted)
+ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a>
 <a href="#" id="FCOP-show" class="showLink" onclick="showHide('FCOP');return false;">(see abstract)</a>
 <div id="FCOP" class="more"> 
 We build model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences determined by families of subgroups. In particular, by specifying to the family of graph subgroups (or, more generally, one of the indexing systems of Blumberg-Hill), we obtain model structures on the category of equivariant simplicial operads with a fixed set of colors, with weak equivalences are determined by norm map data.
