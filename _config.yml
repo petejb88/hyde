@@ -5,6 +5,7 @@ description:      Assistant Teaching Professor, <br> Mathematics, <br> Georgetow
 url:              https://petejb88.github.io
 baseurl:          ''
 paginate:         5
+future:           true
 
 author:           
   name:           'Peter Bonventre'
