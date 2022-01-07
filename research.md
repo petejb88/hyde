@@ -16,6 +16,7 @@ I am drawn to questions of how to scaffold large and intricate problems, and bui
 Current objects of study include: equivariant operads, dendroidal sets, model categories, and structured ring spectra.
 
 Recent and ongoing work includes:
+* extending Gamma-homology and related obstruction theory to the equivariant setting
 * investigating topological and spectral commutative monoids up to homotopy in the equivariant setting
 * exploring the impact of this structure on cohomology theories, and computing examples (by hand and using Macaulay2)
 * developing and comparing several models for the homotopy theory of equivariant operads
@@ -63,7 +64,7 @@ We build model structures on the category of equivariant simplicial operads with
 
 
 **Rigidification of dendroidal infinity-operads** (with Lu&#237;s Pereira)<br>
-To appear in _Homology, Homotopy and Applications_.<br>
+<a href="https://dx.doi.org/10.4310/HHA.2021.v23.n2.a18">_Homology, Homotopy and Applications_</a>, 23 (2021), no. 2, 349-372.<br>
 ArXiv preprint: [2004.12296](https://arxiv.org/abs/2004.12296)
 <a href="#" id="WCON-show" class="showLink" onclick="showHide('WCON');return false;">(see abstract)</a>
 <div id="WCON" class="more">
