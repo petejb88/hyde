@@ -51,8 +51,8 @@ We build model structures on the category of equivariant simplicial operads with
 </div>
 
 
-<b>Homotopy theory of equivariant operads with fixed colors</b> (with Lu&#237;s Pereira) <br>
-To appear in _Tunisian Journal of Mathematics_.<br>
+**Homotopy theory of equivariant operads with fixed colors** (with Lu&#237;s Pereira) <br>
+<a href="https://msp.org/tunis/2022/4-1/p04.xhtml">_Tunisian Journal of Mathematics_</a>, 4 (2022), no. 1, 75-158.</br>
 ArXiv preprint: <a href="https://arxiv.org/abs/1908.05440">1908.05440</a>
 <a href="#" id="FCOP-show" class="showLink" onclick="showHide('FCOP');return false;">(see abstract)</a>
 <div id="FCOP" class="more"> 
@@ -122,6 +122,16 @@ S. Amanuel, H. Bauer, **P. Bonventre**, D. Lasher<br>
 *Journal of Physical Chemistry C*, 2009, 113(44), 18983-18986
 
 ## Preprints
+
+
+**On the \(KU_G\)-local sphere** (with Bertrand J Guillou and Nathaniel J Stapleton) <br>
+ArXiv preprint: <a href="https://arxiv.org/abs/2204.03797">2204.03797</a> (submitted)
+<a href="#" id="JSQUAD2-show" class="showLink" onclick="showHide('JSQUAD2');return false;">(see abstract)</a>
+<div id="JSQUAD2" class="more"> 
+Equivariant complex $K$-theory and the equivariant sphere spectrum are two of the most fundamental equivariant spectra. 
+For an odd $p$-group, we calculate the zeroth homotopy Green functor of the localization of the equivariant sphere spectrum with respect to equivariant complex $K$-theory.
+<a href="#" id="JSQUAD2-hide" class="hideLink" onclick="showHide('JSQUAD2');return false;">(hide abstract)</a>
+</div>
 
                           
 <b>Additive power operations in equivariant cohomology</b> (with Bertrand J Guillou and Nathaniel J Stapleton) <br>
