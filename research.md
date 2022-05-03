@@ -130,6 +130,7 @@ ArXiv preprint: <a href="https://arxiv.org/abs/2204.03797">2204.03797</a> (submi
 <div id="JSQUAD2" class="more"> 
 Equivariant complex $K$-theory and the equivariant sphere spectrum are two of the most fundamental equivariant spectra. 
 For an odd $p$-group, we calculate the zeroth homotopy Green functor of the localization of the equivariant sphere spectrum with respect to equivariant complex $K$-theory.
+Further, we calculate the zeroth homotopy Tambara functor structure in the case of odd cyclic p-groups.
 <a href="#" id="JSQUAD2-hide" class="hideLink" onclick="showHide('JSQUAD2');return false;">(hide abstract)</a>
 </div>
 
