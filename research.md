@@ -28,17 +28,6 @@ In addition to these projects in pure mathematics, other projects and interests 
 
 ## Publications
 
-<b>Equivariant dendroidal sets and simplicial operads</b> (with Lu&#237;s Pereira)<br>
-To appear in _Journal of Topology_.<br>
-ArXiv preprint: <a href="https://arxiv.org/abs/1911.06399">1911.06399</a>
-<a href="#" id="TAS-show" class="showLink" onclick="showHide('TAS');return false;">(see abstract)</a>
-<div id="TAS" class="more">
-We establish a Quillen equivalence between the homotopy theories of equivariant Segal operads and equivariant simplicial operads with norm maps. Together with previous work, we further conclude that the homotopy coherent nerve is a right-Quillen equivalence from the model category of equivariant simplicial operads with norm maps to the model category structure for equivariant-∞-operads in equivariant dendroidal sets.
-<a href="#" id="TAS-hide" class="hideLink" onclick="showHide('TAS');return false;">(hide abstract)</a>
-<br><br>
-</div>
-
-
 **On the homotopy theory of equivariant colored operads** (with Lu&#237;s Pereira)<br>
 To appear in _Algebraic & Geometric Topology_. <br>
 ArXiv preprint: <a href="https://arxiv.org/abs/2004.01352">2004.01352</a>
@@ -48,6 +37,17 @@ We build model structures on the category of equivariant simplicial operads with
 <a href="#" id="ACOP-hide" class="hideLink" onclick="showHide('ACOP');return false;">(hide abstract)</a>
 <br>
 <br>
+</div>
+
+
+<b>Equivariant dendroidal sets and simplicial operads</b> (with Lu&#237;s Pereira)<br>
+<a href="https://londmathsoc.onlinelibrary.wiley.com/doi/10.1112/topo.12223">_Journal of Topology_</a>, 15 (2022), no. 2, 745-805.<br>
+ArXiv preprint: <a href="https://arxiv.org/abs/1911.06399">1911.06399</a>
+<a href="#" id="TAS-show" class="showLink" onclick="showHide('TAS');return false;">(see abstract)</a>
+<div id="TAS" class="more">
+We establish a Quillen equivalence between the homotopy theories of equivariant Segal operads and equivariant simplicial operads with norm maps. Together with previous work, we further conclude that the homotopy coherent nerve is a right-Quillen equivalence from the model category of equivariant simplicial operads with norm maps to the model category structure for equivariant-∞-operads in equivariant dendroidal sets.
+<a href="#" id="TAS-hide" class="hideLink" onclick="showHide('TAS');return false;">(hide abstract)</a>
+<br><br>
 </div>
 
 
